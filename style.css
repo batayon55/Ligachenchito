@@ -79,28 +79,50 @@ body{
 
     margin:20px;
 
-    height:220px;
+    height:240px;
 
-    border-radius:22px;
+    border-radius:24px;
 
-    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+    background:#1e293b;
+
+    background-size:cover;
+
+    background-position:center;
 
     display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
 
-    text-align:center;
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    align-items:flex-start;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
 
 }
 
 .banner h2{
+
     font-size:34px;
-    margin-bottom:10px;
+
+    font-weight:800;
+
+    margin-bottom:8px;
+
+    text-shadow:2px 2px 8px rgba(0,0,0,.7);
+
 }
 
 .banner p{
+
     font-size:18px;
+
+    color:#f1f5f9;
+
+    text-shadow:1px 1px 6px rgba(0,0,0,.7);
+
 }
 
 /*========== CHENCHITAZO ==========*/
