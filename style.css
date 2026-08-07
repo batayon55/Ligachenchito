@@ -417,3 +417,25 @@ color:#94a3b8;
 font-size:18px;
 
 }
+    
+    /*========== JORNADA ==========*/
+
+.actualizacion{
+
+    margin:0 20px 20px;
+
+    padding:12px;
+
+    background:#1e293b;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#22c55e;
+
+}
