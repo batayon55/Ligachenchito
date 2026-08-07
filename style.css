@@ -239,3 +239,57 @@ body{
 .menu{
 
     position:
+
+        /*=========================================
+=     CLASIFICACIÓN PREMIUM v1.1          =
+=========================================*/
+
+.tabla{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0 8px;
+}
+
+.tabla th{
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:600;
+    padding:10px;
+    text-transform:uppercase;
+}
+
+.tabla td{
+    background:#243247;
+    padding:14px 10px;
+    font-size:16px;
+}
+
+.tabla td:first-child{
+    border-radius:12px 0 0 12px;
+    text-align:center;
+    width:55px;
+}
+
+.tabla td:last-child{
+    border-radius:0 12px 12px 0;
+    text-align:center;
+    width:60px;
+}
+
+.tabla td:nth-child(3){
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.oro td:first-child{
+    border-left:6px solid #FFD700;
+}
+
+.plata td:first-child{
+    border-left:6px solid #C0C0C0;
+}
+
+.bronce td:first-child{
+    border-left:6px solid #CD7F32;
+}
