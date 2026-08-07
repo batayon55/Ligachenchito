@@ -293,3 +293,17 @@ body{
 .bronce td:first-child{
     border-left:6px solid #CD7F32;
 }
+    
+/*=========================================
+=       EQUIPOS CLASIFICACIÓN             =
+=========================================*/
+
+.equipo{
+
+    text-align:left !important;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+}
