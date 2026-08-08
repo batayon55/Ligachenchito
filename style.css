@@ -492,3 +492,19 @@ font-size:18px;
     color:#22c55e;
 
 }
+
+/* ESCUDOS DE LA CLASIFICACIÓN */
+
+.escudo-equipo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* Nombres de los equipos alineados a la izquierda */
+
+.clasificacion .nombre-equipo {
+    text-align: left;
+}
