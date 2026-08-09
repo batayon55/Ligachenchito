@@ -571,29 +571,33 @@ gap:15px;
 }
 .menu-inicio{
     position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:70px;
-    background:#111827;
+    bottom:12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:auto;
+    height:auto;
+    background:transparent;
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:1000;
-    box-shadow:0 -4px 15px rgba(0,0,0,.35);
 }
 
 .menu-inicio button{
-    background:none;
-    border:none;
+    background:#1e293b;
+    border:1px solid #475569;
     color:#ffffff;
     font-size:15px;
     font-weight:bold;
-    padding:12px 30px;
+    padding:10px 24px;
+    border-radius:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.35);
     cursor:pointer;
 }
 
 .menu-inicio button:active{
+    transform:scale(.96);
+}
     transform:scale(.96);
 }
 
