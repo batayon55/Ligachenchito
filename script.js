@@ -3,15 +3,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const menu = document.querySelector(".menu");
-    const botones = menu ? menu.querySelectorAll("button") : [];
-
-    const inicio = document.querySelector("main");
-    const estadisticas = document.querySelector(".estadisticas");
-
     // Botón Inicio
-    if (botones[0]) {
-        botones[0].addEventListener("click", () => {
+    const botonInicio = document.querySelector(".menu button:nth-child(1)");
+
+    if (botonInicio) {
+        botonInicio.addEventListener("click", () => {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
@@ -20,9 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Botón Estadísticas
-    if (botones[1] && estadisticas) {
-        botones[1].addEventListener("click", () => {
-            estadisticas.scrollIntoView({
+    const botonEstadisticas = document.querySelector(".menu button:nth-child(2)");
+    const seccionEstadisticas = document.querySelector("#estadisticas");
+
+    if (botonEstadisticas && seccionEstadisticas) {
+        botonEstadisticas.addEventListener("click", () => {
+            seccionEstadisticas.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
