@@ -21,44 +21,30 @@ body{
     padding-bottom:90px;
 }
 
+
 /*========== CABECERA ==========*/
 
 .topbar{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
     width:100%;
-
     background:#111827;
-
     padding:14px 18px;
-
     box-shadow:0 4px 15px rgba(0,0,0,.35);
-
 }
 
 .cabecera{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
 }
 
 .escudo{
     width:65px;
     height:65px;
-
     border-radius:50%;
-
     background:#243247;
-
     margin-right:15px;
 }
 
@@ -73,223 +59,117 @@ body{
     font-size:14px;
 }
 
+
 /*========== BANNER ==========*/
 
 .banner{
-
     margin:20px;
-
     height:240px;
-
     border-radius:24px;
-
     background:#1e293b;
-
     background-size:cover;
-
     background-position:center;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:flex-end;
-
     align-items:flex-start;
-
     padding:25px;
-
     box-shadow:0 10px 25px rgba(0,0,0,.35);
-
 }
 
 .banner h2{
-
     font-size:34px;
-
     font-weight:800;
-
     margin-bottom:8px;
-
     text-shadow:2px 2px 8px rgba(0,0,0,.7);
-
 }
 
 .banner p{
-
     font-size:18px;
-
     color:#f1f5f9;
-
     text-shadow:1px 1px 6px rgba(0,0,0,.7);
-
 }
+
 
 /*========== CHENCHITAZO ==========*/
 
 .chenchitazo{
-
     margin:20px;
-
     padding:22px;
-
-    background:white;
-
+    background:#ffffff;
     color:#111827;
-
     border-radius:22px;
-
     box-shadow:0 10px 25px rgba(0,0,0,.25);
-
 }
 
 .etiqueta{
-
     display:inline-block;
-
     background:#d90429;
-
-    color:white;
-
+    color:#ffffff;
     padding:8px 14px;
-
     border-radius:30px;
-
     font-weight:bold;
-
     margin-bottom:15px;
-
 }
 
 .chenchitazo h2{
-
     font-size:36px;
-
     font-weight:900;
-
     line-height:1.1;
-
     margin-bottom:12px;
-
     color:#111827;
-
 }
 
 .subtitulo{
-
     color:#475569;
-
     font-style:italic;
-
     font-size:18px;
-
     line-height:1.5;
-
     margin-bottom:20px;
-
 }
 
 .imagen-chenchitazo{
-
     width:100%;
-
     height:240px;
-
     overflow:hidden;
-
     border-radius:18px;
-
     margin-bottom:20px;
-
 }
 
 .imagen-chenchitazo img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     display:block;
-
 }
 
 .resumen{
-
     line-height:1.8;
-
     font-size:17px;
-
     text-align:justify;
-
 }
 
-/*========== TARJETAS ==========*/
+
+/*========== BLOQUES PRINCIPALES ==========*/
 
 .clasificacion,
 .estadisticas,
 .graficos{
-
     margin:20px;
-
     padding:20px;
-
     background:#1e293b;
-
     border-radius:22px;
-
 }
 
 .clasificacion h2,
 .estadisticas h2,
 .graficos h2{
-
     color:#FFD700;
-
     margin-bottom:18px;
-
 }
 
-/*========== TABLA ==========*/
 
-.tabla{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-}
-
-.tabla th{
-
-    background:#0f172a;
-
-    color:#FFD700;
-
-    padding:12px;
-
-}
-
-.tabla td{
-
-    padding:12px;
-
-    text-align:center;
-
-    border-bottom:1px solid #334155;
-
-}
-
-.tabla tr:last-child td{
-
-    border-bottom:none;
-
-}
-
-        /*=========================================
-=     CLASIFICACIÓN PREMIUM v1.1          =
-=========================================*/
+/*========== CLASIFICACIÓN ==========*/
 
 .tabla{
     width:100%;
@@ -307,135 +187,9 @@ body{
 
 .tabla td{
     background:#243247;
-    padding:14px 10px;
+    padding:10px;
     font-size:16px;
-}
-
-.tabla td:first-child{
-    border-radius:12px 0 0 12px;
-    text-align:center;
-    width:55px;
-}
-
-.tabla td:last-child{
-
-    border-radius:0 12px 12px 0;
-
-    text-align:center;
-
-    width:65px;
-
-    font-weight:bold;
-
-    font-size:18px;
-
-}
-
-.tabla td:nth-child(3){
-
-    text-align:center;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    color:#FFD700;
-
-    width:70px;
-
-}
-
-.oro td:first-child{
-    border-left:6px solid #FFD700;
-}
-
-.plata td:first-child{
-    border-left:6px solid #C0C0C0;
-}
-
-.bronce td:first-child{
-    border-left:6px solid #CD7F32;
-}
-    
-/*=========================================
-=       EQUIPOS CLASIFICACIÓN             =
-=========================================*/
-
-.equipo{
-
-    text-align:left !important;
-
-    font-weight:600;
-
-    letter-spacing:.3px;
-
-}
-    
-/*========== TARJETAS ESTADÍSTICAS ==========*/
-
-.tarjetas{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:15px;
-
-}
-
-/*========== MENÚ INFERIOR ==========*/
-
-.menu{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:70px;
-    background:#111827;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    z-index:1000;
-    box-shadow:0 -4px 15px rgba(0,0,0,.35);
-}
-
-.menu button{
-    background:none;
     border:none;
-    color:#ffffff;
-    font-size:15px;
-    font-weight:bold;
-    padding:12px 25px;
-    cursor:pointer;
-}
-
-.menu button:active{
-    transform:scale(.96);
-}
-
-
-/*=========================================
-= CLASIFICACIÓN =
-=========================================*/
-
-.tabla{
-    width:100%;
-    border-collapse:separate;
-    border-spacing:0 8px;
-}
-
-.tabla th{
-    color:#94a3b8;
-    font-size:14px;
-    font-weight:600;
-    padding:10px;
-    text-transform:uppercase;
-}
-
-.tabla td{
-    background:#243247;
-    padding:10px;
-    font-size:16px;
 }
 
 .tabla td:first-child{
@@ -460,6 +214,9 @@ gap:15px;
     width:60px;
 }
 
+
+/*========== MEDALLAS / POSICIONES ==========*/
+
 .oro td:first-child{
     border-left:6px solid #FFD700;
 }
@@ -473,9 +230,7 @@ gap:15px;
 }
 
 
-/*=========================================
-= EQUIPOS =
-=========================================*/
+/*========== EQUIPOS ==========*/
 
 .equipo{
     text-align:left !important;
@@ -487,6 +242,8 @@ gap:15px;
 .escudo-equipo{
     width:32px;
     height:32px;
+    min-width:32px;
+    max-width:32px;
     object-fit:contain;
     display:inline-block;
     vertical-align:middle;
@@ -494,9 +251,7 @@ gap:15px;
 }
 
 
-/*=========================================
-= ESTADÍSTICAS =
-=========================================*/
+/*========== ESTADÍSTICAS ==========*/
 
 .tarjetas{
     display:grid;
@@ -523,9 +278,7 @@ gap:15px;
 }
 
 
-/*=========================================
-= GRÁFICOS =
-=========================================*/
+/*========== GRÁFICOS ==========*/
 
 .graficos-grid{
     display:flex;
@@ -557,7 +310,7 @@ gap:15px;
 }
 
 
-/*========== JORNADA ==========*/
+/*========== ACTUALIZACIÓN ==========*/
 
 .actualizacion{
     margin:0 20px 20px;
@@ -569,6 +322,10 @@ gap:15px;
     font-weight:bold;
     color:#22c55e;
 }
+
+
+/*========== BOTÓN INICIO ==========*/
+
 .menu-inicio{
     position:fixed;
     bottom:12px;
@@ -598,9 +355,106 @@ gap:15px;
 .menu-inicio button:active{
     transform:scale(.96);
 }
-    transform:scale(.96);
-}
 
-body{
-    padding-bottom:80px;
+
+/*========== MÓVILES ==========*/
+
+@media (max-width:600px){
+
+    .topbar{
+        padding:10px 14px;
+    }
+
+    .escudo{
+        width:55px;
+        height:55px;
+        margin-right:10px;
+    }
+
+    .logo{
+        width:180px;
+    }
+
+    .banner{
+        height:210px;
+        margin:15px;
+        padding:20px;
+    }
+
+    .banner h2{
+        font-size:28px;
+    }
+
+    .banner p{
+        font-size:16px;
+    }
+
+    .chenchitazo{
+        margin:15px;
+        padding:18px;
+    }
+
+    .chenchitazo h2{
+        font-size:28px;
+    }
+
+    .imagen-chenchitazo{
+        height:200px;
+    }
+
+    .clasificacion,
+    .estadisticas,
+    .graficos{
+        margin:15px;
+        padding:15px;
+    }
+
+    .tabla{
+        font-size:14px;
+    }
+
+    .tabla th{
+        font-size:12px;
+        padding:8px 5px;
+    }
+
+    .tabla td{
+        padding:8px 5px;
+        font-size:14px;
+    }
+
+    .tabla td:first-child{
+        width:38px;
+    }
+
+    .tabla td:nth-child(3){
+        width:48px;
+        font-size:17px;
+    }
+
+    .tabla td:last-child{
+        width:48px;
+        font-size:16px;
+    }
+
+    .escudo-equipo{
+        width:30px;
+        height:30px;
+        min-width:30px;
+        max-width:30px;
+        margin-right:6px;
+    }
+
+    .equipo{
+        font-size:13px;
+    }
+
+    .tarjetas{
+        grid-template-columns:1fr;
+    }
+
+    .menu-inicio button{
+        padding:9px 22px;
+        font-size:14px;
+    }
 }
