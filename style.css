@@ -187,7 +187,7 @@ body{
 
 .tabla td{
     background:#243247;
-    padding:8px 10px;
+    padding:10px;
     font-size:16px;
     border:none;
 }
@@ -240,14 +240,14 @@ body{
 }
 
 .escudo-equipo{
-    width:36px;
-    height:36px;
-    min-width:36px;
-    max-width:36px;
+    width:32px;
+    height:32px;
+    min-width:32px;
+    max-width:32px;
     object-fit:contain;
     display:inline-block;
     vertical-align:middle;
-    margin:0 7px 0 0;
+    margin:0 8px 0 0;
 }
 
 
@@ -438,12 +438,11 @@ body{
     }
 
     .escudo-equipo{
-    width:36px;
-    height:36px;
-    min-width:36px;
-    max-width:36px;
-    object-fit:contain;
-    margin-right:7px;
+        width:30px;
+        height:30px;
+        min-width:30px;
+        max-width:30px;
+        margin-right:6px;
     }
 
     .equipo{
@@ -458,4 +457,4 @@ body{
         padding:9px 22px;
         font-size:14px;
     }
-}
+    }
