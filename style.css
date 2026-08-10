@@ -460,3 +460,12 @@ body{
         font-size:14px;
     }
     }
+
+/*========== AJUSTE FINAL LOGO CABECERA ==========*/
+
+.logo-horizontal{
+    width:220px !important;
+    max-width:220px !important;
+    height:auto !important;
+    display:block;
+}
