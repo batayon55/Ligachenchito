@@ -484,7 +484,6 @@ body{
         padding:9px 22px;
         font-size:14px;
     }
-    }
 
 /*========== AJUSTE FINAL LOGO CABECERA ==========*/
 
@@ -493,4 +492,34 @@ body{
     max-width:220px !important;
     height:auto !important;
     display:block;
+}
+@media (max-width:600px){
+
+    .topbar{
+        padding:8px 10px;
+    }
+
+    .cabecera{
+        min-height:76px;
+    }
+
+    .escudo{
+        width:52px;
+        height:52px;
+    }
+
+    .cerdito{
+        width:50px;
+        height:50px;
+    }
+
+    .logo-horizontal{
+        width:190px;
+        max-width:52vw;
+    }
+
+    .temporada{
+        font-size:11px;
+        letter-spacing:1.5px;
+    }
 }
