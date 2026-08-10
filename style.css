@@ -450,14 +450,19 @@ body{
 }
 
 .temporada{
-    margin-top:5px;
-    padding:3px 18px;
-    border:1px solid #3a465c;
-    border-radius:20px;
+    margin-top:6px;
     color:#cbd5e1;
     font-size:11px;
     letter-spacing:2px;
+    text-align:center;
     line-height:1.2;
+}
+
+.temporada strong{
+    color:#f5c542;
+    font-size:13px;
+    letter-spacing:2px;
+    margin-left:5px;
 }
 
 .cerdito{
@@ -496,9 +501,13 @@ body{
     }
 
     .temporada{
-        margin-top:4px;
-        padding:3px 16px;
-        font-size:10px;
-        letter-spacing:1.5px;
-    }
+    margin-top:4px;
+    font-size:10px;
+    letter-spacing:1.5px;
+}
+
+.temporada strong{
+    font-size:12px;
+    letter-spacing:1.5px;
+}
 }
