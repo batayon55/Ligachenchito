@@ -419,22 +419,65 @@ body{
         font-size:14px;
     }
 
-/*========== AJUSTE FINAL LOGO CABECERA ==========*/
+/*========== CABECERA FINAL ==========*/
+
+.cabecera{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    width:100%;
+}
+
+.escudo{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    justify-self:start;
+}
+
+.titulo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
 
 .logo-horizontal{
-    width:220px !important;
-    max-width:220px !important;
-    height:auto !important;
+    width:220px;
+    max-width:100%;
+    height:auto;
     display:block;
 }
+
+.temporada{
+    margin-top:5px;
+    padding:3px 18px;
+    border:1px solid #3a465c;
+    border-radius:20px;
+    color:#cbd5e1;
+    font-size:11px;
+    letter-spacing:2px;
+    line-height:1.2;
+}
+
+.cerdito{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    justify-self:end;
+}
+
+
+/*========== MÓVIL ==========*/
+
 @media (max-width:600px){
 
     .topbar{
-        padding:8px 10px;
+        padding:8px 12px;
     }
 
     .cabecera{
-        min-height:76px;
+        min-height:82px;
     }
 
     .escudo{
@@ -443,8 +486,8 @@ body{
     }
 
     .cerdito{
-        width:50px;
-        height:50px;
+        width:52px;
+        height:52px;
     }
 
     .logo-horizontal{
@@ -453,7 +496,9 @@ body{
     }
 
     .temporada{
-        font-size:11px;
+        margin-top:4px;
+        padding:3px 16px;
+        font-size:10px;
         letter-spacing:1.5px;
     }
 }
