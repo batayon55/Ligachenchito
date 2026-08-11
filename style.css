@@ -318,83 +318,146 @@ body{
 }
 
 
-/*========== CABECERA ==========*/
+/*========== CABECERA PREMIUM ==========*/
 
 .topbar{
     position:sticky;
     top:0;
     z-index:1000;
     width:100%;
-    background:linear-gradient(135deg,#111827 0%,#1a2435 50%,#111827 100%);
-    border-bottom:1px solid rgba(255,215,0,.18);
-    box-shadow:0 5px 20px rgba(0,0,0,.35);
-    padding:10px 14px;
+    padding:8px 14px 10px;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+        rgba(212,175,55,.12) 0%,
+        rgba(212,175,55,.035) 28%,
+        transparent 55%),
+        linear-gradient(180deg,#111827 0%,#0b1220 100%);
+
+    border-bottom:1px solid rgba(212,175,55,.22);
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.38),
+        inset 0 -1px 0 rgba(255,255,255,.025);
 }
 
 .cabecera{
     width:100%;
-    max-width:900px;
-    margin:auto;
+    max-width:960px;
+    margin:0 auto;
+
     display:grid;
-    grid-template-columns:72px 1fr 72px;
+    grid-template-columns:80px 1fr 80px;
     align-items:center;
-    min-height:82px;
+
+    min-height:86px;
+    position:relative;
 }
 
+
+/*========== ELEMENTOS LATERALES ==========*/
+
 .escudo{
-    width:62px;
-    height:62px;
+    width:64px;
+    height:64px;
     object-fit:contain;
     justify-self:start;
+
+    filter:
+        drop-shadow(0 4px 5px rgba(0,0,0,.45))
+        drop-shadow(0 0 10px rgba(255,215,0,.08));
 }
+
+.cerdito{
+    width:64px;
+    height:64px;
+    object-fit:contain;
+    justify-self:end;
+
+    filter:
+        drop-shadow(0 4px 5px rgba(0,0,0,.45))
+        drop-shadow(0 0 10px rgba(255,215,0,.08));
+}
+
+
+/*========== CENTRO ==========*/
 
 .titulo{
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    position:relative;
+    z-index:2;
 }
 
 .logo-horizontal{
-    width:220px !important;
+    width:225px !important;
     max-width:100% !important;
     height:auto !important;
     display:block;
-    filter:drop-shadow(0 3px 5px rgba(0,0,0,.35));
+
+    filter:
+        drop-shadow(0 3px 5px rgba(0,0,0,.55))
+        drop-shadow(0 0 16px rgba(255,255,255,.07));
 }
 
+
+/*========== TEMPORADA ==========*/
+
 .temporada{
-    margin-top:3px;
-    color:#cbd5e1;
-    font-size:10px;
-    font-weight:600;
-    letter-spacing:2px;
-    line-height:1.2;
-    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:4px;
+
+    color:#94a3b8;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:2.5px;
+    line-height:1;
+
+    text-transform:uppercase;
 }
 
 .temporada strong{
-    color:#f5c542;
+    color:#d4af37;
     font-size:13px;
-    letter-spacing:1.5px;
-    margin-left:4px;
-}
+    letter-spacing:1.8px;
+    margin-left:6px;
 
-.cerdito{
-    width:62px;
-    height:62px;
-    object-fit:contain;
-    justify-self:end;
-    filter:drop-shadow(0 3px 5px rgba(0,0,0,.35));
+    text-shadow:0 0 10px rgba(212,175,55,.18);
 }
 
 
-/*========== MÓVILES ==========*/
+/*========== DETALLE INFERIOR ==========*/
+
+.topbar::after{
+    content:"";
+    display:block;
+
+    width:120px;
+    height:2px;
+
+    margin:6px auto 0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(212,175,55,.65),
+        transparent
+    );
+
+    opacity:.65;
+}
+
+
+/*========== MÓVIL ==========*/
 
 @media (max-width:600px){
 
     .topbar{
-        padding:8px 10px;
+        padding:6px 10px 8px;
     }
 
     .cabecera{
@@ -418,14 +481,20 @@ body{
     }
 
     .temporada{
-        margin-top:3px;
-        font-size:9px;
-        letter-spacing:1.5px;
+        margin-top:4px;
+        font-size:8px;
+        letter-spacing:1.8px;
     }
 
     .temporada strong{
         font-size:11px;
-        letter-spacing:1.2px;
+        letter-spacing:1.4px;
+        margin-left:5px;
+    }
+
+    .topbar::after{
+        width:90px;
+        margin-top:5px;
     }
 
 }
