@@ -1,6 +1,8 @@
 /*=========================================
-=            LIGA CHENCHITO v1.0          =
+=          LIGA CHENCHITO v1.0            =
+=              STYLE LIMPIO               =
 =========================================*/
+
 
 /*========== ESTILOS GENERALES ==========*/
 
@@ -14,6 +16,13 @@ html{
     scroll-behavior:smooth;
 }
 
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0f172a;
@@ -22,515 +31,21 @@ body{
 }
 
 
-/*========== BANNER ==========*/
-
-.banner{
-    position:relative;
-    margin:22px 20px;
-    height:300px;
-    overflow:hidden;
-    border-radius:24px;
-
-    background-image:url("banners/banner-jornada-1.png");
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    align-items:flex-start;
-
-    padding:30px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.45),
-        inset 0 0 0 1px rgba(255,255,255,.03);
-}
-
-.banner::after{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
-        0deg,
-        rgba(5,8,15,.65) 0%,
-        rgba(5,8,15,.05) 60%,
-        transparent 100%
-    );
-
-    pointer-events:none;
-}
-
-.banner h2,
-.banner p{
-    position:relative;
-    z-index:2;
-}
-
-.banner h2{
-    font-size:34px;
-    font-weight:800;
-    margin-bottom:8px;
-    text-shadow:2px 2px 8px rgba(0,0,0,.7);
-}
-
-.banner p{
-    font-size:18px;
-    color:#f1f5f9;
-    text-shadow:1px 1px 6px rgba(0,0,0,.7);
-}
-
-
-/*========== CHENCHITAZO ==========*/
-
-.chenchitazo{
-    position:relative;
-    margin:22px 20px;
-
-    background:#f4f0e7;
-    color:#111827;
-
-    border-radius:6px;
-    overflow:hidden;
-
-    border:1px solid #d5cec0;
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,.30),
-        0 3px 8px rgba(0,0,0,.12);
-}
-
-
-/* Franja superior */
-
-.chenchitazo::before{
-    content:"";
-    display:block;
-    height:6px;
-
-    background:linear-gradient(
-        90deg,
-        #111827 0%,
-        #111827 72%,
-        #c89b3c 72%,
-        #c89b3c 100%
-    );
-}
-
-
-/*========== NOMBRE DEL PERIÓDICO ==========*/
-
-.etiqueta{
-    display:block;
-
-    margin:0;
-    padding:17px 20px 12px;
-
-    background:#111827;
-    color:#ffffff;
-
-    border-radius:0;
-
-    text-align:center;
-
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:31px;
-    font-weight:900;
-
-    letter-spacing:-1px;
-    line-height:1;
-
-    box-shadow:none;
-}
-
-
-/* Línea editorial bajo el nombre */
-
-.etiqueta::after{
-    content:"EDICIÓN ESPECIAL · LIGA CHENCHITO";
-
-    display:block;
-
-    margin-top:9px;
-    padding-top:7px;
-
-    border-top:1px solid rgba(255,255,255,.25);
-
-    color:#cbd5e1;
-
-    font-family:Arial,Helvetica,sans-serif;
-
-    font-size:8px;
-    font-weight:700;
-
-    letter-spacing:2px;
-}
-
-
-/*========== CONTENIDO ==========*/
-
-.chenchitazo h2{
-    position:relative;
-
-    margin:0;
-    padding:22px 22px 8px;
-
-    color:#111827;
-
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:37px;
-    font-weight:900;
-
-    line-height:1.02;
-    letter-spacing:-1px;
-}
-
-
-/*========== FRASE DESTACADA ==========*/
-
-.subtitulo{
-    margin:0;
-    padding:8px 22px 20px;
-
-    color:#475569;
-
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:17px;
-    font-weight:600;
-    font-style:italic;
-
-    line-height:1.45;
-}
-
-
-/*========== IMAGEN ==========*/
-
-.imagen-chenchitazo{
-    position:relative;
-
-    width:calc(100% - 44px);
-    height:290px;
-
-    margin:0 22px 22px;
-
-    overflow:hidden;
-
-    background:#111827;
-
-    border-radius:3px;
-
-    box-shadow:
-        0 8px 18px rgba(0,0,0,.18);
-}
-
-.imagen-chenchitazo::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
-        0deg,
-        rgba(0,0,0,.18),
-        transparent 45%
-    );
-
-    pointer-events:none;
-}
-
-.imagen-chenchitazo img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-}
-
-
-/*========== RESUMEN ==========*/
-
-.resumen{
-    margin:0 22px;
-    padding:18px 0 24px;
-
-    border-top:2px solid #111827;
-
-    color:#334155;
-
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:16px;
-
-    line-height:1.75;
-
-    text-align:left;
-}
-
-.resumen::before{
-    content:"LA CRÓNICA";
-
-    display:block;
-
-    margin-bottom:9px;
-
-    color:#b91c1c;
-
-    font-family:Arial,Helvetica,sans-serif;
-
-    font-size:10px;
-    font-weight:900;
-
-    letter-spacing:2px;
-}
-
-
-/*========== BLOQUES PRINCIPALES ==========*/
-
-.clasificacion,
-.estadisticas,
-.graficos{
-    margin:20px;
-    padding:20px;
-
-    background:#1e293b;
-
-    border-radius:22px;
-}
-
-.clasificacion h2,
-.estadisticas h2,
-.graficos h2{
-    color:#FFD700;
-    margin-bottom:18px;
-}
-
-
-/*========== CLASIFICACIÓN ==========*/
-
-.tabla{
-    width:100%;
-    border-collapse:separate;
-    border-spacing:0 8px;
-}
-
-.tabla th{
-    color:#94a3b8;
-    font-size:14px;
-    font-weight:600;
-    padding:10px;
-    text-transform:uppercase;
-}
-
-.tabla td{
-    background:#243247;
-    padding:10px;
-    font-size:16px;
-    border:none;
-}
-
-.tabla td:first-child{
-    border-radius:12px 0 0 12px;
-    text-align:center;
-    width:45px;
-}
-
-.tabla td:last-child{
-    border-radius:0 12px 12px 0;
-    text-align:center;
-    width:55px;
-    font-weight:bold;
-    font-size:18px;
-}
-
-.tabla td:nth-child(3){
-    text-align:center;
-    font-size:20px;
-    font-weight:700;
-    color:#FFD700;
-    width:60px;
-}
-
-
-/*========== MEDALLAS ==========*/
-
-.oro td:first-child{
-    border-left:6px solid #FFD700;
-}
-
-.plata td:first-child{
-    border-left:6px solid #C0C0C0;
-}
-
-.bronce td:first-child{
-    border-left:6px solid #CD7F32;
-}
-
-
-/*========== EQUIPOS ==========*/
-
-.equipo{
-    text-align:left !important;
-    font-weight:600;
-    letter-spacing:.2px;
-    white-space:nowrap;
-}
-
-.escudo-equipo{
-    width:32px;
-    height:32px;
-    min-width:32px;
-    max-width:32px;
-
-    object-fit:contain;
-    display:inline-block;
-    vertical-align:middle;
-
-    margin:0 8px 0 0;
-}
-
-
-/*========== ESTADÍSTICAS ==========*/
-
-.tarjetas{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.tarjeta{
-    background:#243247;
-    padding:18px;
-    border-radius:16px;
-    text-align:center;
-}
-
-.tarjeta h3{
-    margin-bottom:10px;
-    font-size:16px;
-    color:#FFD700;
-}
-
-.tarjeta p{
-    font-size:20px;
-    font-weight:bold;
-}
-
-
-/*========== GRÁFICOS ==========*/
-
-.graficos-grid{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-.grafico-card{
-    background:#243247;
-    padding:18px;
-    border-radius:16px;
-}
-
-.grafico-card h3{
-    margin-bottom:15px;
-    color:#FFD700;
-    text-align:center;
-}
-
-.grafico-placeholder{
-    height:180px;
-
-    border:2px dashed #475569;
-    border-radius:12px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    color:#94a3b8;
-    font-size:18px;
-}
-
-
-/*========== ACTUALIZACIÓN ==========*/
-
-.actualizacion{
-    margin:0 20px 20px;
-
-    padding:12px;
-
-    background:#1e293b;
-
-    border-radius:14px;
-
-    text-align:center;
-
-    font-size:18px;
-    font-weight:bold;
-
-    color:#22c55e;
-}
-
-
-/*========== BOTÓN INICIO ==========*/
-
-.menu-inicio{
-    position:fixed;
-    bottom:12px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:auto;
-    height:auto;
-
-    background:transparent;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    z-index:1000;
-}
-
-.menu-inicio button{
-    background:#1e293b;
-
-    border:1px solid #475569;
-
-    color:#ffffff;
-
-    font-size:15px;
-    font-weight:bold;
-
-    padding:10px 24px;
-
-    border-radius:25px;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.35);
-
-    cursor:pointer;
-}
-
-.menu-inicio button:active{
-    transform:scale(.96);
-}
-
-
-/*========== CABECERA PREMIUM ==========*/
+/*=========================================
+=              CABECERA PREMIUM           =
+=========================================*/
 
 .topbar{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+
     background:
         radial-gradient(
             circle at center,
-            #171717 0%,
-            #090909 55%,
+            #1a1a1a 0%,
+            #0a0a0a 55%,
             #050505 100%
         );
 
@@ -538,19 +53,16 @@ body{
 
     padding:14px 20px 12px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.45);
-
-    position:relative;
-    z-index:10;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.45);
 }
 
 .cabecera{
     width:100%;
     max-width:1100px;
+    min-height:105px;
 
     margin:0 auto;
-
-    min-height:105px;
 
     display:grid;
 
@@ -565,7 +77,7 @@ body{
 }
 
 
-/* ESCUDO */
+/*========== ESCUDO ==========*/
 
 .escudo{
     width:82px;
@@ -575,17 +87,17 @@ body{
 
     justify-self:center;
 
-    filter:drop-shadow(
-        0 4px 8px rgba(0,0,0,.7)
-    );
+    filter:
+        drop-shadow(0 4px 8px rgba(0,0,0,.7));
 }
 
 
-/* CENTRO */
+/*========== CENTRO CABECERA ==========*/
 
 .titulo{
-    display:flex;
+    min-width:0;
 
+    display:flex;
     flex-direction:column;
 
     align-items:center;
@@ -595,18 +107,16 @@ body{
 .logo-horizontal{
     width:310px !important;
     max-width:100% !important;
-
     height:auto !important;
 
     display:block;
 
-    filter:drop-shadow(
-        0 5px 10px rgba(0,0,0,.65)
-    );
+    filter:
+        drop-shadow(0 5px 10px rgba(0,0,0,.65));
 }
 
 
-/* TEMPORADA */
+/*========== TEMPORADA ==========*/
 
 .temporada{
     margin-top:7px;
@@ -656,7 +166,7 @@ body{
 }
 
 
-/* CERDITO */
+/*========== CERDITO ==========*/
 
 .cerdito{
     width:82px;
@@ -666,21 +176,652 @@ body{
 
     justify-self:center;
 
-    filter:drop-shadow(
-        0 4px 8px rgba(0,0,0,.7)
-    );
+    filter:
+        drop-shadow(0 4px 8px rgba(0,0,0,.7));
 }
 
 
-/*========== MÓVILES ==========*/
+/*=========================================
+=                  BANNER                 =
+=========================================*/
+
+.banner{
+    position:relative;
+
+    margin:22px 20px;
+
+    height:300px;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background-image:
+        url("banners/banner-jornada-1.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:flex-end;
+    align-items:flex-start;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.45),
+        inset 0 0 0 1px rgba(255,255,255,.03);
+}
+
+.banner::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(5,8,15,.65) 0%,
+            rgba(5,8,15,.05) 60%,
+            transparent 100%
+        );
+
+    pointer-events:none;
+}
+
+.banner h2,
+.banner p{
+    position:relative;
+    z-index:1;
+}
+
+.banner h2{
+    font-size:34px;
+    font-weight:800;
+
+    margin-bottom:8px;
+
+    text-shadow:
+        2px 2px 8px rgba(0,0,0,.7);
+}
+
+.banner p{
+    font-size:18px;
+
+    color:#f1f5f9;
+
+    text-shadow:
+        1px 1px 6px rgba(0,0,0,.7);
+}
+
+
+/*=========================================
+=             ACTUALIZACIÓN               =
+=========================================*/
+
+.actualizacion{
+    margin:0 20px 20px;
+
+    padding:12px;
+
+    background:#1e293b;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    font-size:18px;
+    font-weight:bold;
+
+    color:#22c55e;
+}
+
+
+/*=========================================
+=              CHENCHITAZO                =
+=             ESTILO PERIÓDICO            =
+=========================================*/
+
+.chenchitazo{
+    position:relative;
+
+    margin:22px 20px;
+
+    padding:0;
+
+    background:#f4f0e7;
+
+    color:#111827;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    border:1px solid #d6d0c3;
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.30),
+        0 3px 8px rgba(0,0,0,.12);
+}
+
+
+/*========== CABECERA PERIÓDICO ==========*/
+
+.periodico-cabecera{
+    padding:18px 24px 14px;
+
+    background:#111827;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    border-bottom:5px solid #c89b3c;
+}
+
+.periodico-numero{
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#cbd5e1;
+
+    margin-bottom:5px;
+}
+
+.nombre-periodico{
+    margin:0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:42px;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    line-height:1;
+
+    color:#ffffff;
+}
+
+.periodico-linea{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:12px;
+
+    padding-top:8px;
+
+    border-top:
+        1px solid rgba(255,255,255,.25);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    color:#cbd5e1;
+}
+
+
+/*========== CUERPO NOTICIA ==========*/
+
+.noticia-chenchitazo{
+    padding:25px 25px 27px;
+}
+
+.noticia-etiqueta{
+    display:inline-block;
+
+    padding:5px 9px;
+
+    background:#b91c1c;
+
+    color:#ffffff;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:13px;
+}
+
+
+/*========== TITULAR ==========*/
+
+.titular-chenchitazo{
+    margin:0 0 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:39px;
+
+    font-weight:900;
+
+    line-height:1.02;
+
+    letter-spacing:-1px;
+
+    color:#111827;
+}
+
+
+/*========== FRASE ==========*/
+
+.frase-chenchitazo{
+    margin:0 0 21px;
+
+    padding:12px 15px;
+
+    border-left:5px solid #c89b3c;
+
+    background:
+        rgba(200,155,60,.10);
+
+    color:#475569;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:17px;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    line-height:1.45;
+}
+
+
+/*========== IMAGEN ==========*/
+
+.imagen-chenchitazo{
+    width:100%;
+
+    height:300px;
+
+    overflow:hidden;
+
+    margin-bottom:24px;
+
+    background:#111827;
+}
+
+.imagen-chenchitazo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .4s ease;
+}
+
+.chenchitazo:hover
+.imagen-chenchitazo img{
+    transform:scale(1.02);
+}
+
+
+/*========== CRÓNICA ==========*/
+
+.cronica-chenchitazo{
+    border-top:
+        2px solid #111827;
+
+    padding-top:16px;
+}
+
+.cronica-titulo{
+    margin-bottom:9px;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    color:#b91c1c;
+}
+
+.cronica-chenchitazo p{
+    margin:0;
+
+    color:#334155;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:16px;
+
+    line-height:1.75;
+}
+
+
+/*=========================================
+=             BLOQUES PRINCIPALES         =
+=========================================*/
+
+.clasificacion,
+.estadisticas,
+.graficos{
+    margin:20px;
+
+    padding:20px;
+
+    background:#1e293b;
+
+    border-radius:22px;
+}
+
+.clasificacion h2,
+.estadisticas h2,
+.graficos h2{
+    color:#FFD700;
+
+    margin-bottom:18px;
+}
+
+
+/*=========================================
+=              CLASIFICACIÓN              =
+=========================================*/
+
+.tabla{
+    width:100%;
+
+    border-collapse:separate;
+
+    border-spacing:
+        0 8px;
+}
+
+.tabla th{
+    color:#94a3b8;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px;
+
+    text-transform:uppercase;
+}
+
+.tabla td{
+    background:#243247;
+
+    padding:10px;
+
+    font-size:16px;
+
+    border:none;
+}
+
+.tabla td:first-child{
+    border-radius:
+        12px 0 0 12px;
+
+    text-align:center;
+
+    width:45px;
+}
+
+.tabla td:last-child{
+    border-radius:
+        0 12px 12px 0;
+
+    text-align:center;
+
+    width:55px;
+
+    font-weight:bold;
+
+    font-size:18px;
+}
+
+.tabla td:nth-child(3){
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#FFD700;
+
+    width:60px;
+}
+
+
+/*========== MEDALLAS ==========*/
+
+.oro td:first-child{
+    border-left:
+        6px solid #FFD700;
+}
+
+.plata td:first-child{
+    border-left:
+        6px solid #C0C0C0;
+}
+
+.bronce td:first-child{
+    border-left:
+        6px solid #CD7F32;
+}
+
+
+/*========== EQUIPOS ==========*/
+
+.equipo{
+    text-align:left !important;
+
+    font-weight:600;
+
+    letter-spacing:.2px;
+
+    white-space:nowrap;
+}
+
+.escudo-equipo{
+    width:32px;
+    height:32px;
+
+    min-width:32px;
+    max-width:32px;
+
+    object-fit:contain;
+
+    display:inline-block;
+
+    vertical-align:middle;
+
+    margin:
+        0 8px 0 0;
+}
+
+
+/*=========================================
+=              ESTADÍSTICAS               =
+=========================================*/
+
+.tarjetas{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+}
+
+.tarjeta{
+    background:#243247;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    text-align:center;
+}
+
+.tarjeta h3{
+    margin-bottom:10px;
+
+    font-size:16px;
+
+    color:#FFD700;
+}
+
+.tarjeta p{
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+
+/*=========================================
+=                 GRÁFICOS                =
+=========================================*/
+
+.graficos-grid{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.grafico-card{
+    background:#243247;
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+.grafico-card h3{
+    margin-bottom:15px;
+
+    color:#FFD700;
+
+    text-align:center;
+}
+
+.grafico-placeholder{
+    height:180px;
+
+    border:
+        2px dashed #475569;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#94a3b8;
+
+    font-size:18px;
+}
+
+
+/*=========================================
+=              BOTÓN INICIO               =
+=========================================*/
+
+.menu-inicio{
+    position:fixed;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    width:auto;
+    height:auto;
+
+    background:transparent;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.menu-inicio button{
+    background:#1e293b;
+
+    border:
+        1px solid #475569;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    padding:10px 24px;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.35);
+
+    cursor:pointer;
+}
+
+.menu-inicio button:active{
+    transform:scale(.96);
+}
+
+
+/*=========================================
+=                  MÓVIL                  =
+=========================================*/
 
 @media (max-width:600px){
+
+    /*========== CABECERA ==========*/
 
     .topbar{
         padding:10px 12px 9px;
     }
 
     .cabecera{
+        width:100%;
+
         min-height:92px;
 
         grid-template-columns:
@@ -727,67 +868,7 @@ body{
     }
 
 
-    /* CHENCHITAZO MÓVIL */
-
-    .chenchitazo{
-        margin:16px;
-        border-radius:5px;
-    }
-
-    .etiqueta{
-        padding:14px 12px 10px;
-
-        font-size:26px;
-    }
-
-    .etiqueta::after{
-        margin-top:8px;
-
-        font-size:7px;
-        letter-spacing:1.5px;
-    }
-
-    .chenchitazo h2{
-        padding:19px 17px 7px;
-
-        font-size:29px;
-
-        line-height:1.04;
-        letter-spacing:-.5px;
-    }
-
-    .subtitulo{
-        padding:7px 17px 17px;
-
-        font-size:15px;
-        line-height:1.45;
-    }
-
-    .imagen-chenchitazo{
-        width:calc(100% - 34px);
-
-        height:205px;
-
-        margin:0 17px 18px;
-    }
-
-    .resumen{
-        margin:0 17px;
-
-        padding:15px 0 20px;
-
-        font-size:15px;
-
-        line-height:1.65;
-    }
-
-    .resumen::before{
-        font-size:9px;
-        letter-spacing:1.7px;
-    }
-
-
-    /* RESTO DEL SITIO */
+    /*========== BANNER ==========*/
 
     .banner{
         height:235px;
@@ -809,12 +890,110 @@ body{
         font-size:16px;
     }
 
+
+    /*========== ACTUALIZACIÓN ==========*/
+
+    .actualizacion{
+        margin:
+            0 16px 16px;
+
+        font-size:15px;
+    }
+
+
+    /*========== CHENCHITAZO ==========*/
+
+    .chenchitazo{
+        margin:16px;
+
+        border-radius:5px;
+    }
+
+    .periodico-cabecera{
+        padding:
+            15px 15px 12px;
+    }
+
+    .periodico-numero{
+        font-size:8px;
+
+        letter-spacing:1.5px;
+    }
+
+    .nombre-periodico{
+        font-size:30px;
+
+        letter-spacing:-1px;
+    }
+
+    .periodico-linea{
+        margin-top:9px;
+
+        padding-top:7px;
+
+        font-size:7px;
+
+        letter-spacing:1px;
+    }
+
+    .noticia-chenchitazo{
+        padding:
+            20px 17px 22px;
+    }
+
+    .noticia-etiqueta{
+        font-size:8px;
+
+        margin-bottom:11px;
+    }
+
+    .titular-chenchitazo{
+        font-size:29px;
+
+        line-height:1.04;
+
+        letter-spacing:-.6px;
+    }
+
+    .frase-chenchitazo{
+        font-size:15px;
+
+        padding:10px 12px;
+
+        margin-bottom:17px;
+    }
+
+    .imagen-chenchitazo{
+        height:205px;
+
+        margin-bottom:19px;
+    }
+
+    .cronica-chenchitazo{
+        padding-top:13px;
+    }
+
+    .cronica-chenchitazo p{
+        font-size:15px;
+
+        line-height:1.65;
+    }
+
+
+    /*========== BLOQUES ==========*/
+
     .clasificacion,
     .estadisticas,
     .graficos{
         margin:15px;
+
         padding:15px;
+
+        border-radius:20px;
     }
+
+
+    /*========== TABLA ==========*/
 
     .tabla{
         font-size:14px;
@@ -822,11 +1001,13 @@ body{
 
     .tabla th{
         font-size:12px;
+
         padding:8px 5px;
     }
 
     .tabla td{
         padding:8px 5px;
+
         font-size:14px;
     }
 
@@ -836,11 +1017,13 @@ body{
 
     .tabla td:nth-child(3){
         width:48px;
+
         font-size:17px;
     }
 
     .tabla td:last-child{
         width:48px;
+
         font-size:16px;
     }
 
@@ -858,12 +1041,20 @@ body{
         font-size:13px;
     }
 
+
+    /*========== ESTADÍSTICAS ==========*/
+
     .tarjetas{
         grid-template-columns:1fr;
     }
 
+
+    /*========== BOTÓN ==========*/
+
     .menu-inicio button{
-        padding:9px 22px;
+        padding:
+            9px 22px;
+
         font-size:14px;
     }
-        }
+}
