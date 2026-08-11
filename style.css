@@ -321,134 +321,99 @@ body{
 /*========== CABECERA PREMIUM ==========*/
 
 .topbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    width:100%;
-    padding:8px 14px 10px;
-
     background:
-        radial-gradient(circle at 50% 45%,
-        rgba(212,175,55,.12) 0%,
-        rgba(212,175,55,.035) 28%,
-        transparent 55%),
-        linear-gradient(180deg,#111827 0%,#0b1220 100%);
-
-    border-bottom:1px solid rgba(212,175,55,.22);
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.38),
-        inset 0 -1px 0 rgba(255,255,255,.025);
+        radial-gradient(circle at center, #171717 0%, #090909 55%, #050505 100%);
+    border-bottom:1px solid rgba(197,145,55,.35);
+    padding:14px 20px 12px;
+    box-shadow:0 8px 25px rgba(0,0,0,.45);
+    position:relative;
+    z-index:10;
 }
 
 .cabecera{
     width:100%;
-    max-width:960px;
+    max-width:1100px;
     margin:0 auto;
+    min-height:105px;
 
     display:grid;
-    grid-template-columns:80px 1fr 80px;
+    grid-template-columns:120px minmax(260px,1fr) 120px;
     align-items:center;
-
-    min-height:86px;
-    position:relative;
+    gap:25px;
 }
 
-
-/*========== ELEMENTOS LATERALES ==========*/
+/* ESCUDO */
 
 .escudo{
-    width:64px;
-    height:64px;
+    width:82px;
+    height:82px;
     object-fit:contain;
-    justify-self:start;
-
-    filter:
-        drop-shadow(0 4px 5px rgba(0,0,0,.45))
-        drop-shadow(0 0 10px rgba(255,215,0,.08));
+    justify-self:center;
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,.7));
 }
 
-.cerdito{
-    width:64px;
-    height:64px;
-    object-fit:contain;
-    justify-self:end;
-
-    filter:
-        drop-shadow(0 4px 5px rgba(0,0,0,.45))
-        drop-shadow(0 0 10px rgba(255,215,0,.08));
-}
-
-
-/*========== CENTRO ==========*/
+/* CENTRO */
 
 .titulo{
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    position:relative;
-    z-index:2;
 }
 
 .logo-horizontal{
-    width:225px !important;
+    width:310px !important;
     max-width:100% !important;
     height:auto !important;
     display:block;
-
-    filter:
-        drop-shadow(0 3px 5px rgba(0,0,0,.55))
-        drop-shadow(0 0 16px rgba(255,255,255,.07));
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.65));
 }
 
-
-/*========== TEMPORADA ==========*/
-
 .temporada{
-    display:flex;
+    margin-top:7px;
+
+    display:inline-flex;
     align-items:center;
     justify-content:center;
 
-    margin-top:4px;
+    min-width:105px;
+    padding:4px 16px;
 
-    color:#94a3b8;
-    font-size:9px;
-    font-weight:700;
-    letter-spacing:2.5px;
-    line-height:1;
+    color:#d6d6d6;
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.02)
+    );
 
-    text-transform:uppercase;
+    border:1px solid rgba(197,145,55,.45);
+    border-radius:20px;
+
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:2px;
+    line-height:1.2;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 3px 8px rgba(0,0,0,.3);
 }
 
 .temporada strong{
-    color:#d4af37;
+    color:#f2c45c;
     font-size:13px;
-    letter-spacing:1.8px;
+    letter-spacing:1.5px;
     margin-left:6px;
-
-    text-shadow:0 0 10px rgba(212,175,55,.18);
 }
 
+/* CERDITO */
 
-/*========== DETALLE INFERIOR ==========*/
-
-.topbar::after{
-    content:"";
-    display:block;
-
-    width:120px;
-    height:2px;
-
-    margin:6px auto 0;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(212,175,55,.65),
-        transparent
-    );
-
-    opacity:.65;
+.cerdito{
+    width:82px;
+    height:82px;
+    object-fit:contain;
+    justify-self:center;
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,.7));
 }
 
 
@@ -457,44 +422,41 @@ body{
 @media (max-width:600px){
 
     .topbar{
-        padding:6px 10px 8px;
+        padding:10px 12px 9px;
     }
 
     .cabecera{
-        grid-template-columns:58px 1fr 58px;
-        min-height:76px;
+        min-height:92px;
+        grid-template-columns:58px minmax(0,1fr) 58px;
+        gap:8px;
     }
 
     .escudo{
-        width:50px;
-        height:50px;
+        width:52px;
+        height:52px;
     }
 
     .cerdito{
-        width:50px;
-        height:50px;
+        width:52px;
+        height:52px;
     }
 
     .logo-horizontal{
-        width:190px !important;
-        max-width:58vw !important;
+        width:205px !important;
+        max-width:100% !important;
     }
 
     .temporada{
         margin-top:4px;
-        font-size:8px;
-        letter-spacing:1.8px;
+        min-width:92px;
+        padding:3px 12px;
+        font-size:9px;
+        letter-spacing:1.5px;
     }
 
     .temporada strong{
         font-size:11px;
-        letter-spacing:1.4px;
+        letter-spacing:1.2px;
         margin-left:5px;
     }
-
-    .topbar::after{
-        width:90px;
-        margin-top:5px;
-    }
-
 }
