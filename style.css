@@ -21,6 +21,7 @@ body{
     padding-bottom:90px;
 }
 
+
 /*========== BANNER ==========*/
 
 .banner{
@@ -28,7 +29,6 @@ body{
     margin:22px 20px;
     height:300px;
     overflow:hidden;
-
     border-radius:24px;
 
     background-image:url("banners/banner-jornada-1.png");
@@ -64,170 +64,39 @@ body{
     pointer-events:none;
 }
 
-
-/*========== BANNER MÓVIL ==========*/
-
-@media (max-width:600px){
-
-    .banner{
-        height:235px;
-        margin:16px;
-        padding:20px;
-        border-radius:20px;
-
-        background-position:center;
-    }
-
+.banner h2,
+.banner p{
+    position:relative;
+    z-index:2;
 }
+
+.banner h2{
+    font-size:34px;
+    font-weight:800;
+    margin-bottom:8px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.7);
+}
+
+.banner p{
+    font-size:18px;
+    color:#f1f5f9;
+    text-shadow:1px 1px 6px rgba(0,0,0,.7);
+}
+
+
 /*========== CHENCHITAZO ==========*/
 
 .chenchitazo{
     position:relative;
     margin:22px 20px;
-    padding:28px 26px 26px;
-
-    background:
-        linear-gradient(145deg,#ffffff 0%,#f8fafc 100%);
-
-    color:#111827;
-
-    border-radius:24px;
-
-    border:1px solid rgba(255,255,255,.75);
-
-    box-shadow:
-        0 18px 40px rgba(0,0,0,.28),
-        0 2px 8px rgba(0,0,0,.12);
-
-    overflow:hidden;
-}
-
-
-/*========== DETALLE EDITORIAL ==========*/
-
-.chenchitazo::before{
-    content:"";
-
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:5px;
-
-    background:linear-gradient(
-        90deg,
-        #b91c1c,
-        #ef4444,
-        #d4af37,
-        #ef4444,
-        #b91c1c
-    );
-}
-
-.chenchitazo::after{
-    content:"";
-
-    position:absolute;
-    top:5px;
-    right:-45px;
-
-    width:150px;
-    height:150px;
-
-    background:radial-gradient(
-        circle,
-        rgba(212,175,55,.12) 0%,
-        transparent 70%
-    );
-
-    pointer-events:none;
-}
-
-
-/*========== CABECERA DEL CHENCHITAZO ==========*/
-
-.etiqueta{
-    display:inline-flex;
-    align-items:center;
-
-    background:#111827;
-    color:#f8fafc;
-
-    padding:7px 13px;
-
-    border-radius:7px;
-
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.2px;
-
-    margin-bottom:17px;
-
-    box-shadow:0 4px 10px rgba(0,0,0,.18);
-}
-
-
-/*========== TITULAR ==========*/
-
-.chenchitazo h2{
-    position:relative;
-
-    font-size:38px;
-    font-weight:950;
-
-    line-height:1.02;
-
-    letter-spacing:-.8px;
-
-    margin-bottom:10px;
-
-    color:#111827;
-}
-
-
-/*========== FRASE DESTACADA ==========*/
-
-.subtitulo{
-    position:relative;
-
-    margin-bottom:21px;
-
-    padding-left:15px;
-
-    border-left:4px solid #d4af37;
-
-    color:#64748b;
-
-    font-size:17px;
-    font-weight:600;
-    font-style:italic;
-
-    line-height:1.45;
-}
-
-
-/*========== IMAGEN ==========*/
-
-.imagen-chenchitazo{
-    position:relative;
-
-    width:100%;
-    height:255px;
-/*========== EL CHENCHITAZO · PERIÓDICO ==========*/
-
-.chenchitazo{
-    position:relative;
-    margin:22px 20px;
-    padding:0;
 
     background:#f4f0e7;
     color:#111827;
 
-    border-radius:4px;
-
+    border-radius:6px;
     overflow:hidden;
 
-    border:1px solid #d6d0c3;
+    border:1px solid #d5cec0;
 
     box-shadow:
         0 16px 35px rgba(0,0,0,.30),
@@ -235,119 +104,106 @@ body{
 }
 
 
-/*========== CABECERA DEL PERIÓDICO ==========*/
+/* Franja superior */
 
-.periodico-cabecera{
-    padding:18px 24px 14px;
+.chenchitazo::before{
+    content:"";
+    display:block;
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        #111827 0%,
+        #111827 72%,
+        #c89b3c 72%,
+        #c89b3c 100%
+    );
+}
+
+
+/*========== NOMBRE DEL PERIÓDICO ==========*/
+
+.etiqueta{
+    display:block;
+
+    margin:0;
+    padding:17px 20px 12px;
 
     background:#111827;
     color:#ffffff;
 
+    border-radius:0;
+
     text-align:center;
 
-    border-bottom:5px solid #c89b3c;
-}
+    font-family:Georgia,"Times New Roman",serif;
 
-.periodico-numero{
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:2px;
-
-    color:#cbd5e1;
-
-    margin-bottom:5px;
-}
-
-.nombre-periodico{
-    margin:0;
-
-    font-family:Georgia, "Times New Roman", serif;
-
-    font-size:42px;
+    font-size:31px;
     font-weight:900;
 
-    letter-spacing:-1.5px;
+    letter-spacing:-1px;
     line-height:1;
 
-    color:#ffffff;
+    box-shadow:none;
 }
 
-.periodico-linea{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 
-    margin-top:12px;
-    padding-top:8px;
+/* Línea editorial bajo el nombre */
+
+.etiqueta::after{
+    content:"EDICIÓN ESPECIAL · LIGA CHENCHITO";
+
+    display:block;
+
+    margin-top:9px;
+    padding-top:7px;
 
     border-top:1px solid rgba(255,255,255,.25);
 
-    font-size:9px;
-    font-weight:800;
-    letter-spacing:1.5px;
-
     color:#cbd5e1;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:2px;
 }
 
 
-/*========== NOTICIA ==========*/
+/*========== CONTENIDO ==========*/
 
-.noticia-chenchitazo{
-    padding:25px 25px 27px;
-}
+.chenchitazo h2{
+    position:relative;
 
-.noticia-etiqueta{
-    display:inline-block;
+    margin:0;
+    padding:22px 22px 8px;
 
-    padding:5px 9px;
+    color:#111827;
 
-    background:#b91c1c;
-    color:#ffffff;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:10px;
-    font-weight:900;
-
-    letter-spacing:1.2px;
-
-    margin-bottom:13px;
-}
-
-
-/*========== GRAN TITULAR ==========*/
-
-.titular-chenchitazo{
-    margin:0 0 12px;
-
-    font-family:Georgia, "Times New Roman", serif;
-
-    font-size:39px;
+    font-size:37px;
     font-weight:900;
 
     line-height:1.02;
     letter-spacing:-1px;
-
-    color:#111827;
 }
 
 
-/*========== FRASE GRACIOSA ==========*/
+/*========== FRASE DESTACADA ==========*/
 
-.frase-chenchitazo{
-    margin:0 0 21px;
-
-    padding:12px 15px;
-
-    border-left:5px solid #c89b3c;
-
-    background:rgba(200,155,60,.10);
+.subtitulo{
+    margin:0;
+    padding:8px 22px 20px;
 
     color:#475569;
 
-    font-family:Georgia, "Times New Roman", serif;
+    font-family:Georgia,"Times New Roman",serif;
 
     font-size:17px;
-    font-style:italic;
     font-weight:600;
+    font-style:italic;
 
     line-height:1.45;
 }
@@ -356,14 +212,36 @@ body{
 /*========== IMAGEN ==========*/
 
 .imagen-chenchitazo{
-    width:100%;
-    height:300px;
+    position:relative;
+
+    width:calc(100% - 44px);
+    height:290px;
+
+    margin:0 22px 22px;
 
     overflow:hidden;
 
-    margin-bottom:24px;
-
     background:#111827;
+
+    border-radius:3px;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.18);
+}
+
+.imagen-chenchitazo::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        0deg,
+        rgba(0,0,0,.18),
+        transparent 45%
+    );
+
+    pointer-events:none;
 }
 
 .imagen-chenchitazo img{
@@ -373,113 +251,46 @@ body{
     display:block;
 
     object-fit:cover;
-
-    transition:transform .4s ease;
-}
-
-.chenchitazo:hover .imagen-chenchitazo img{
-    transform:scale(1.02);
 }
 
 
-/*========== CRÓNICA ==========*/
+/*========== RESUMEN ==========*/
 
-.cronica-chenchitazo{
+.resumen{
+    margin:0 22px;
+    padding:18px 0 24px;
+
     border-top:2px solid #111827;
-
-    padding-top:16px;
-}
-
-.cronica-titulo{
-    margin-bottom:9px;
-
-    font-size:11px;
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    color:#b91c1c;
-}
-
-.cronica-chenchitazo p{
-    margin:0;
 
     color:#334155;
 
-    font-family:Georgia, "Times New Roman", serif;
+    font-family:Georgia,"Times New Roman",serif;
 
     font-size:16px;
 
     line-height:1.75;
+
+    text-align:left;
+}
+
+.resumen::before{
+    content:"LA CRÓNICA";
+
+    display:block;
+
+    margin-bottom:9px;
+
+    color:#b91c1c;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:2px;
 }
 
 
-/*========== MÓVIL ==========*/
-
-@media (max-width:600px){
-
-    .chenchitazo{
-        margin:16px;
-    }
-
-    .periodico-cabecera{
-        padding:15px 15px 12px;
-    }
-
-    .periodico-numero{
-        font-size:8px;
-        letter-spacing:1.5px;
-    }
-
-    .nombre-periodico{
-        font-size:30px;
-        letter-spacing:-1px;
-    }
-
-    .periodico-linea{
-        margin-top:9px;
-        padding-top:7px;
-
-        font-size:7px;
-        letter-spacing:1px;
-    }
-
-    .noticia-chenchitazo{
-        padding:20px 17px 22px;
-    }
-
-    .noticia-etiqueta{
-        font-size:8px;
-        margin-bottom:11px;
-    }
-
-    .titular-chenchitazo{
-        font-size:29px;
-        line-height:1.04;
-        letter-spacing:-.6px;
-    }
-
-    .frase-chenchitazo{
-        font-size:15px;
-        padding:10px 12px;
-        margin-bottom:17px;
-    }
-
-    .imagen-chenchitazo{
-        height:205px;
-        margin-bottom:19px;
-    }
-
-    .cronica-chenchitazo{
-        padding-top:13px;
-    }
-
-    .cronica-chenchitazo p{
-        font-size:15px;
-        line-height:1.65;
-    }
-
-}
 /*========== BLOQUES PRINCIPALES ==========*/
 
 .clasificacion,
@@ -487,7 +298,9 @@ body{
 .graficos{
     margin:20px;
     padding:20px;
+
     background:#1e293b;
+
     border-radius:22px;
 }
 
@@ -545,7 +358,7 @@ body{
 }
 
 
-/*========== MEDALLAS / POSICIONES ==========*/
+/*========== MEDALLAS ==========*/
 
 .oro td:first-child{
     border-left:6px solid #FFD700;
@@ -574,9 +387,11 @@ body{
     height:32px;
     min-width:32px;
     max-width:32px;
+
     object-fit:contain;
     display:inline-block;
     vertical-align:middle;
+
     margin:0 8px 0 0;
 }
 
@@ -630,11 +445,14 @@ body{
 
 .grafico-placeholder{
     height:180px;
+
     border:2px dashed #475569;
     border-radius:12px;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     color:#94a3b8;
     font-size:18px;
 }
@@ -644,12 +462,18 @@ body{
 
 .actualizacion{
     margin:0 20px 20px;
+
     padding:12px;
+
     background:#1e293b;
+
     border-radius:14px;
+
     text-align:center;
+
     font-size:18px;
     font-weight:bold;
+
     color:#22c55e;
 }
 
@@ -660,25 +484,37 @@ body{
     position:fixed;
     bottom:12px;
     left:50%;
+
     transform:translateX(-50%);
+
     width:auto;
     height:auto;
+
     background:transparent;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     z-index:1000;
 }
 
 .menu-inicio button{
     background:#1e293b;
+
     border:1px solid #475569;
+
     color:#ffffff;
+
     font-size:15px;
     font-weight:bold;
+
     padding:10px 24px;
+
     border-radius:25px;
+
     box-shadow:0 4px 12px rgba(0,0,0,.35);
+
     cursor:pointer;
 }
 
@@ -691,10 +527,19 @@ body{
 
 .topbar{
     background:
-        radial-gradient(circle at center, #171717 0%, #090909 55%, #050505 100%);
+        radial-gradient(
+            circle at center,
+            #171717 0%,
+            #090909 55%,
+            #050505 100%
+        );
+
     border-bottom:1px solid rgba(197,145,55,.35);
+
     padding:14px 20px 12px;
+
     box-shadow:0 8px 25px rgba(0,0,0,.45);
+
     position:relative;
     z-index:10;
 }
@@ -702,30 +547,47 @@ body{
 .cabecera{
     width:100%;
     max-width:1100px;
+
     margin:0 auto;
+
     min-height:105px;
 
     display:grid;
-    grid-template-columns:120px minmax(260px,1fr) 120px;
+
+    grid-template-columns:
+        120px
+        minmax(260px,1fr)
+        120px;
+
     align-items:center;
+
     gap:25px;
 }
+
 
 /* ESCUDO */
 
 .escudo{
     width:82px;
     height:82px;
+
     object-fit:contain;
+
     justify-self:center;
-    filter:drop-shadow(0 4px 8px rgba(0,0,0,.7));
+
+    filter:drop-shadow(
+        0 4px 8px rgba(0,0,0,.7)
+    );
 }
+
 
 /* CENTRO */
 
 .titulo{
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
     justify-content:center;
 }
@@ -733,34 +595,49 @@ body{
 .logo-horizontal{
     width:310px !important;
     max-width:100% !important;
+
     height:auto !important;
+
     display:block;
-    filter:drop-shadow(0 5px 10px rgba(0,0,0,.65));
+
+    filter:drop-shadow(
+        0 5px 10px rgba(0,0,0,.65)
+    );
 }
+
+
+/* TEMPORADA */
 
 .temporada{
     margin-top:7px;
 
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
 
     min-width:105px;
+
     padding:4px 16px;
 
     color:#d6d6d6;
-    background:linear-gradient(
-        180deg,
-        rgba(255,255,255,.07),
-        rgba(255,255,255,.02)
-    );
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.02)
+        );
 
     border:1px solid rgba(197,145,55,.45);
+
     border-radius:20px;
 
     font-size:11px;
     font-weight:600;
+
     letter-spacing:2px;
+
     line-height:1.2;
 
     box-shadow:
@@ -770,23 +647,32 @@ body{
 
 .temporada strong{
     color:#f2c45c;
+
     font-size:13px;
+
     letter-spacing:1.5px;
+
     margin-left:6px;
 }
+
 
 /* CERDITO */
 
 .cerdito{
     width:82px;
     height:82px;
+
     object-fit:contain;
+
     justify-self:center;
-    filter:drop-shadow(0 4px 8px rgba(0,0,0,.7));
+
+    filter:drop-shadow(
+        0 4px 8px rgba(0,0,0,.7)
+    );
 }
 
 
-/*========== MÓVIL ==========*/
+/*========== MÓVILES ==========*/
 
 @media (max-width:600px){
 
@@ -796,7 +682,12 @@ body{
 
     .cabecera{
         min-height:92px;
-        grid-template-columns:58px minmax(0,1fr) 58px;
+
+        grid-template-columns:
+            58px
+            minmax(0,1fr)
+            58px;
+
         gap:8px;
     }
 
@@ -817,15 +708,162 @@ body{
 
     .temporada{
         margin-top:4px;
+
         min-width:92px;
+
         padding:3px 12px;
+
         font-size:9px;
+
         letter-spacing:1.5px;
     }
 
     .temporada strong{
         font-size:11px;
+
         letter-spacing:1.2px;
+
         margin-left:5px;
     }
-}
+
+
+    /* CHENCHITAZO MÓVIL */
+
+    .chenchitazo{
+        margin:16px;
+        border-radius:5px;
+    }
+
+    .etiqueta{
+        padding:14px 12px 10px;
+
+        font-size:26px;
+    }
+
+    .etiqueta::after{
+        margin-top:8px;
+
+        font-size:7px;
+        letter-spacing:1.5px;
+    }
+
+    .chenchitazo h2{
+        padding:19px 17px 7px;
+
+        font-size:29px;
+
+        line-height:1.04;
+        letter-spacing:-.5px;
+    }
+
+    .subtitulo{
+        padding:7px 17px 17px;
+
+        font-size:15px;
+        line-height:1.45;
+    }
+
+    .imagen-chenchitazo{
+        width:calc(100% - 34px);
+
+        height:205px;
+
+        margin:0 17px 18px;
+    }
+
+    .resumen{
+        margin:0 17px;
+
+        padding:15px 0 20px;
+
+        font-size:15px;
+
+        line-height:1.65;
+    }
+
+    .resumen::before{
+        font-size:9px;
+        letter-spacing:1.7px;
+    }
+
+
+    /* RESTO DEL SITIO */
+
+    .banner{
+        height:235px;
+
+        margin:16px;
+
+        padding:20px;
+
+        border-radius:20px;
+
+        background-position:center;
+    }
+
+    .banner h2{
+        font-size:28px;
+    }
+
+    .banner p{
+        font-size:16px;
+    }
+
+    .clasificacion,
+    .estadisticas,
+    .graficos{
+        margin:15px;
+        padding:15px;
+    }
+
+    .tabla{
+        font-size:14px;
+    }
+
+    .tabla th{
+        font-size:12px;
+        padding:8px 5px;
+    }
+
+    .tabla td{
+        padding:8px 5px;
+        font-size:14px;
+    }
+
+    .tabla td:first-child{
+        width:38px;
+    }
+
+    .tabla td:nth-child(3){
+        width:48px;
+        font-size:17px;
+    }
+
+    .tabla td:last-child{
+        width:48px;
+        font-size:16px;
+    }
+
+    .escudo-equipo{
+        width:30px;
+        height:30px;
+
+        min-width:30px;
+        max-width:30px;
+
+        margin-right:6px;
+    }
+
+    .equipo{
+        font-size:13px;
+    }
+
+    .tarjetas{
+        grid-template-columns:1fr;
+    }
+
+    .menu-inicio button{
+        padding:9px 22px;
+        font-size:14px;
+    }
+        }
