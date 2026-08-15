@@ -284,7 +284,7 @@ body{
 
 
 /*=========================================
-=              CHENCHITAZO                =
+=             CHENCHITAZO                 =
 =             ESTILO PERIÓDICO            =
 =========================================*/
 
@@ -292,15 +292,12 @@ body{
     position:relative;
 
     margin:22px 20px;
-
     padding:0;
 
     background:#f4f0e7;
-
     color:#111827;
 
     border-radius:6px;
-
     overflow:hidden;
 
     border:1px solid #d6d0c3;
@@ -311,12 +308,17 @@ body{
 }
 
 
-/*========== CABECERA PERIÓDICO ==========*/
+/*========== CABECERA ==========*/
 
 .periodico-cabecera{
-    padding:18px 24px 14px;
+    padding:20px 24px 12px;
 
-    background:#111827;
+    background:
+        linear-gradient(
+            135deg,
+            #15191f 0%,
+            #090b0e 100%
+        );
 
     color:#ffffff;
 
@@ -325,17 +327,8 @@ body{
     border-bottom:5px solid #c89b3c;
 }
 
-.periodico-numero{
-    font-size:10px;
 
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    color:#cbd5e1;
-
-    margin-bottom:5px;
-}
+/*========== NOMBRE DEL PERIÓDICO ==========*/
 
 .nombre-periodico{
     margin:0;
@@ -345,45 +338,46 @@ body{
         "Times New Roman",
         serif;
 
-    font-size:42px;
+    font-size:43px;
 
     font-weight:900;
 
-    letter-spacing:-1.5px;
+    line-height:.95;
 
-    line-height:1;
+    letter-spacing:-1.7px;
 
     color:#ffffff;
-}
 
-.periodico-linea{
-    display:flex;
-
-    justify-content:space-between;
-    align-items:center;
-
-    margin-top:12px;
-
-    padding-top:8px;
-
-    border-top:
-        1px solid rgba(255,255,255,.25);
-
-    font-size:9px;
-
-    font-weight:800;
-
-    letter-spacing:1.5px;
-
-    color:#cbd5e1;
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.45);
 }
 
 
-/*========== CUERPO NOTICIA ==========*/
+/*========== JORNADA ==========*/
+
+.periodico-jornada{
+    margin-top:9px;
+
+    text-align:right;
+
+    color:#c89b3c;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+
+/*========== CUERPO DE LA NOTICIA ==========*/
 
 .noticia-chenchitazo{
     padding:25px 25px 27px;
 }
+
+
+/*========== ETIQUETA ==========*/
 
 .noticia-etiqueta{
     display:inline-block;
@@ -391,7 +385,6 @@ body{
     padding:5px 9px;
 
     background:#b91c1c;
-
     color:#ffffff;
 
     font-size:10px;
@@ -407,7 +400,7 @@ body{
 /*========== TITULAR ==========*/
 
 .titular-chenchitazo{
-    margin:0 0 12px;
+    margin:0 0 14px;
 
     font-family:
         Georgia,
@@ -426,7 +419,7 @@ body{
 }
 
 
-/*========== FRASE ==========*/
+/*========== FRASE GRACIOSA ==========*/
 
 .frase-chenchitazo{
     margin:0 0 21px;
@@ -487,7 +480,7 @@ body{
 }
 
 
-/*========== CRÓNICA ==========*/
+/*========== RESUMEN ==========*/
 
 .cronica-chenchitazo{
     border-top:
@@ -523,6 +516,88 @@ body{
     line-height:1.75;
 }
 
+
+/*========== CHENCHITAZO · MÓVIL ==========*/
+
+@media (max-width:600px){
+
+    .chenchitazo{
+        margin:16px;
+        border-radius:5px;
+    }
+
+    .periodico-cabecera{
+        padding:16px 15px 11px;
+    }
+
+    .nombre-periodico{
+        font-size:30px;
+        letter-spacing:-1px;
+    }
+
+    .periodico-jornada{
+        margin-top:8px;
+
+        font-size:8px;
+
+        letter-spacing:1.5px;
+    }
+
+    .noticia-chenchitazo{
+        padding:20px 17px 22px;
+    }
+
+    .noticia-etiqueta{
+        padding:4px 7px;
+
+        font-size:8px;
+
+        letter-spacing:1px;
+
+        margin-bottom:11px;
+    }
+
+    .titular-chenchitazo{
+        margin-bottom:11px;
+
+        font-size:29px;
+
+        line-height:1.04;
+
+        letter-spacing:-.6px;
+    }
+
+    .frase-chenchitazo{
+        margin-bottom:18px;
+
+        padding:10px 12px;
+
+        font-size:15px;
+
+        line-height:1.4;
+    }
+
+    .imagen-chenchitazo{
+        height:205px;
+        margin-bottom:19px;
+    }
+
+    .cronica-chenchitazo{
+        padding-top:13px;
+    }
+
+    .cronica-titulo{
+        font-size:9px;
+        letter-spacing:1.5px;
+    }
+
+    .cronica-chenchitazo p{
+        font-size:15px;
+        line-height:1.65;
+    }
+
+}
+            
 
 /*=========================================
 =             BLOQUES PRINCIPALES         =
