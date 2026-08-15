@@ -284,7 +284,7 @@ body{
 
 
 /*=========================================
-=        EL CHENCHITAZO · PORTADA         =
+=          EL CHENCHITAZO · PORTADA       =
 =========================================*/
 
 .chenchitazo{
@@ -295,128 +295,120 @@ body{
 
     background:
         radial-gradient(
-            circle at 12% 18%,
-            rgba(60,45,25,.07) 0 1px,
+            circle at 18% 20%,
+            rgba(0,0,0,.045) 0 1px,
             transparent 1.5px
         ),
         radial-gradient(
-            circle at 82% 76%,
-            rgba(60,45,25,.06) 0 1px,
+            circle at 76% 70%,
+            rgba(0,0,0,.035) 0 1px,
             transparent 1.5px
         ),
         linear-gradient(
             135deg,
-            #f8f2e6 0%,
-            #eee5d4 100%
+            #fbf6eb 0%,
+            #eee5d5 100%
         );
 
-    background-size:19px 19px,27px 27px,100% 100%;
+    background-size:17px 17px,23px 23px,100% 100%;
 
-    color:#171717;
+    border:1px solid rgba(255,255,255,.75);
+    border-radius:8px;
 
-    border:1px solid #bdb39f;
-
-    border-radius:3px;
+    color:#15171b;
 
     box-shadow:
-        0 25px 55px rgba(0,0,0,.30),
-        0 5px 12px rgba(0,0,0,.15);
+        0 28px 60px rgba(0,0,0,.34),
+        0 8px 18px rgba(0,0,0,.16);
 }
 
 
 /*=========================================
-=              MASTHEAD                  =
+=              CABECERA                  =
 =========================================*/
 
 .periodico-cabecera{
     position:relative;
 
-    padding:20px 24px 17px;
+    min-height:150px;
+
+    padding:34px 30px 24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     background:
         radial-gradient(
-            circle at 50% 0%,
-            #25282d 0%,
-            #111317 45%,
-            #08090b 100%
+            circle at 50% 20%,
+            #25272b 0%,
+            #111317 48%,
+            #07080a 100%
         );
 
-    color:#fff;
-
-    text-align:center;
-
-    border-bottom:7px solid #c49738;
+    border-bottom:9px solid #c59a3a;
 
     box-shadow:
-        inset 0 -1px 0 rgba(255,255,255,.08);
+        inset 0 -1px 0 rgba(255,255,255,.12);
 }
 
 
-/* pequeñas líneas decorativas */
+/* gran detalle diagonal */
 
-.periodico-cabecera::before,
+.periodico-cabecera::before{
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    right:-150px;
+    top:-155px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(197,154,58,.28),
+            rgba(197,154,58,.04) 48%,
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+/* pequeño corte rojo */
+
 .periodico-cabecera::after{
     content:"";
 
     position:absolute;
 
-    left:20px;
-    right:20px;
+    left:0;
+    bottom:-9px;
 
-    height:1px;
+    width:31%;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(196,151,56,.75),
-            transparent
-        );
-}
+    height:9px;
 
-.periodico-cabecera::before{
-    top:12px;
-}
-
-.periodico-cabecera::after{
-    bottom:12px;
+    background:#a91d29;
 }
 
 
 /*=========================================
-=          INFORMACIÓN SUPERIOR          =
-=========================================*/
-
-.masthead-superior{
-    margin-bottom:10px;
-
-    color:#c9a24c;
-
-    font-family:
-        "Arial Narrow",
-        Arial,
-        sans-serif;
-
-    font-size:8px;
-
-    font-weight:900;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-}
-
-
-/*=========================================
-=          NOMBRE DEL PERIÓDICO          =
+=           NOMBRE DEL PERIÓDICO          =
 =========================================*/
 
 .nombre-periodico{
     position:relative;
+    z-index:2;
 
     margin:0;
 
-    color:#fff;
+    color:#ffffff;
 
     font-family:
         Impact,
@@ -424,7 +416,7 @@ body{
         "Arial Narrow Bold",
         sans-serif;
 
-    font-size:clamp(46px,9vw,82px);
+    font-size:clamp(48px,9vw,88px);
 
     font-weight:900;
 
@@ -432,53 +424,13 @@ body{
 
     letter-spacing:1px;
 
+    text-align:center;
+
     text-transform:uppercase;
 
     text-shadow:
-        2px 3px 0 #000,
-        0 7px 16px rgba(0,0,0,.55);
-}
-
-
-/*=========================================
-=           LÍNEA INFERIOR               =
-=========================================*/
-
-.masthead-inferior{
-    display:grid;
-
-    grid-template-columns:1fr auto 1fr;
-
-    align-items:center;
-
-    margin-top:15px;
-
-    padding-top:9px;
-
-    border-top:1px solid rgba(255,255,255,.22);
-
-    color:#cbd0d6;
-
-    font-family:
-        "Arial Narrow",
-        Arial,
-        sans-serif;
-
-    font-size:8px;
-
-    font-weight:900;
-
-    letter-spacing:1.8px;
-
-    text-transform:uppercase;
-}
-
-.masthead-inferior span:first-child{
-    text-align:left;
-}
-
-.masthead-inferior span:last-child{
-    text-align:right;
+        3px 4px 0 #000,
+        0 8px 20px rgba(0,0,0,.65);
 }
 
 
@@ -487,50 +439,22 @@ body{
 =========================================*/
 
 .periodico-jornada{
-    position:relative;
+    position:absolute;
 
-    color:#fff;
+    right:28px;
+    bottom:20px;
 
-    background:#a71925;
+    z-index:5;
 
-    padding:5px 10px;
+    padding:7px 12px;
 
-    font-size:9px;
+    color:#ffffff;
 
-    letter-spacing:1.8px;
-
-    box-shadow:
-        3px 3px 0 #000;
-}
-
-
-/*=========================================
-=              CUERPO                    =
-=========================================*/
-
-.noticia-chenchitazo{
-    position:relative;
-
-    padding:30px 30px 32px;
-}
-
-
-/*=========================================
-=             CATEGORÍA                  =
-=========================================*/
-
-.noticia-categoria{
-    display:flex;
-
-    align-items:center;
-
-    margin-bottom:15px;
-
-    color:#a71925;
+    background:#a91d29;
 
     font-family:
-        "Arial Narrow",
         Arial,
+        Helvetica,
         sans-serif;
 
     font-size:10px;
@@ -539,32 +463,42 @@ body{
 
     letter-spacing:2px;
 
+    line-height:1;
+
     text-transform:uppercase;
-}
 
-.noticia-categoria::after{
-    content:"";
+    transform:rotate(-2deg);
 
-    flex:1;
-
-    height:2px;
-
-    margin-left:13px;
-
-    background:#171717;
+    box-shadow:
+        4px 4px 0 #08090a,
+        0 6px 12px rgba(0,0,0,.3);
 }
 
 
 /*=========================================
-=               TITULAR                  =
+=              CUERPO                   =
+=========================================*/
+
+.noticia-chenchitazo{
+    position:relative;
+
+    padding:42px 38px 38px;
+}
+
+
+/*=========================================
+=              TITULAR                  =
 =========================================*/
 
 .titular-chenchitazo{
-    max-width:1000px;
+    position:relative;
+    z-index:2;
 
     margin:0;
 
-    color:#111318;
+    max-width:100%;
+
+    color:#101216;
 
     font-family:
         Impact,
@@ -572,34 +506,66 @@ body{
         "Arial Narrow Bold",
         sans-serif;
 
-    font-size:clamp(44px,8vw,78px);
+    font-size:clamp(48px,8vw,86px);
 
     font-weight:900;
 
-    line-height:.88;
+    line-height:.86;
 
-    letter-spacing:.2px;
+    letter-spacing:.3px;
 
     text-transform:uppercase;
 }
 
 
-/* línea de impacto */
+/* gran número abstracto generado por CSS */
 
-.titular-linea{
-    width:100%;
+.noticia-chenchitazo::before{
+    content:"";
 
-    height:5px;
+    position:absolute;
 
-    margin:20px 0 0;
+    right:-35px;
+    top:30px;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(169,29,41,.10) 0 42%,
+            transparent 43%
+        );
+
+    pointer-events:none;
+}
+
+
+/*=========================================
+=           BARRA DE IMPACTO             =
+=========================================*/
+
+.titular-chenchitazo::after{
+    content:"";
+
+    display:block;
+
+    width:72%;
+
+    height:8px;
+
+    margin-top:24px;
 
     background:
         linear-gradient(
             90deg,
-            #171717 0%,
-            #171717 65%,
-            #c49738 65%,
-            #c49738 100%
+            #15171b 0%,
+            #15171b 72%,
+            #c59a3a 72%,
+            #c59a3a 100%
         );
 }
 
@@ -610,49 +576,52 @@ body{
 
 .frase-chenchitazo{
     position:relative;
+    z-index:3;
 
-    margin:22px 0 28px;
+    margin:32px 0 34px;
 
-    padding:17px 20px 17px 45px;
+    padding:20px 24px 20px 62px;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(196,151,56,.18),
-            rgba(196,151,56,.04)
-        );
+    background:#17191d;
 
-    border-left:6px solid #c49738;
-
-    color:#292c31;
+    color:#ffffff;
 
     font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size:18px;
+    font-size:19px;
 
-    font-weight:800;
+    font-weight:700;
 
     font-style:italic;
 
-    line-height:1.42;
+    line-height:1.45;
+
+    box-shadow:
+        9px 9px 0 #c59a3a,
+        0 14px 25px rgba(0,0,0,.18);
 }
+
+
+/* comillas gigantes */
 
 .frase-chenchitazo::before{
     content:"“";
 
     position:absolute;
 
-    left:11px;
-    top:3px;
+    left:17px;
+    top:5px;
 
-    color:#a71925;
+    color:#c59a3a;
 
-    font-family:Georgia,serif;
+    font-family:
+        Georgia,
+        serif;
 
-    font-size:55px;
+    font-size:68px;
 
     font-weight:900;
 
@@ -661,72 +630,71 @@ body{
 
 
 /*=========================================
-=              FOTOGRAFÍA                =
+=                IMAGEN                  =
 =========================================*/
 
 .imagen-chenchitazo{
     position:relative;
 
-    width:100%;
-    height:340px;
+    width:calc(100% - 12px);
 
-    margin:0 0 30px;
+    height:350px;
+
+    margin:0 0 38px 12px;
 
     overflow:hidden;
 
-    background:#090a0c;
+    background:#08090a;
 
-    border:9px solid #171717;
+    border:10px solid #15171b;
 
     box-shadow:
-        0 10px 22px rgba(0,0,0,.28);
+        -12px 12px 0 #a91d29,
+        0 20px 35px rgba(0,0,0,.30);
 }
 
 
-/* marco interior */
+/* marco dorado interior */
 
 .imagen-chenchitazo::before{
     content:"";
 
     position:absolute;
 
-    inset:5px;
-
     z-index:3;
 
-    border:1px solid rgba(255,255,255,.22);
+    inset:6px;
+
+    border:1px solid rgba(197,154,58,.75);
 
     pointer-events:none;
 }
 
 
-/* número de foto */
+/* diagonal decorativa */
 
-.foto-numero{
+.imagen-chenchitazo::after{
+    content:"";
+
     position:absolute;
 
-    top:13px;
-    left:13px;
+    z-index:3;
 
-    z-index:4;
+    right:-70px;
+    bottom:-70px;
 
-    padding:5px 8px;
+    width:150px;
+    height:150px;
 
-    background:rgba(0,0,0,.75);
+    border-radius:50%;
 
-    color:#fff;
+    background:#c59a3a;
 
-    font-family:
-        "Arial Narrow",
-        Arial,
-        sans-serif;
+    opacity:.18;
 
-    font-size:8px;
-
-    font-weight:900;
-
-    letter-spacing:1.5px;
+    pointer-events:none;
 }
+
 
 .imagen-chenchitazo img{
     width:100%;
@@ -737,288 +705,279 @@ body{
     object-fit:cover;
 
     transition:
-        transform .5s ease,
-        filter .5s ease;
+        transform .6s ease,
+        filter .6s ease;
 }
+
+
+/* pequeño movimiento al pasar el dedo/mouse */
 
 .chenchitazo:hover
 .imagen-chenchitazo img{
-    transform:scale(1.025);
-}
+    transform:scale(1.035);
 
-
-/* pie de fotografía */
-
-.imagen-chenchitazo figcaption{
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    z-index:4;
-
-    padding:9px 13px;
-
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,.88)
-        );
-
-    color:#fff;
-
-    font-family:
-        "Arial Narrow",
-        Arial,
-        sans-serif;
-
-    font-size:9px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
+    filter:saturate(1.08) contrast(1.03);
 }
 
 
 /*=========================================
-=               CRÓNICA                  =
+=                RESUMEN                 =
 =========================================*/
 
 .cronica-chenchitazo{
     position:relative;
 
-    padding-top:20px;
+    margin-top:10px;
 
-    border-top:5px solid #171717;
+    padding:28px 28px 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.55),
+            rgba(255,255,255,.18)
+        );
+
+    border-top:8px solid #15171b;
+
+    border-left:1px solid rgba(0,0,0,.08);
+    border-right:1px solid rgba(0,0,0,.08);
 }
 
 
-/* cabecera de crónica */
+/* pequeño detalle lateral */
 
-.cronica-cabecera{
-    display:flex;
+.cronica-chenchitazo::before{
+    content:"";
 
-    align-items:center;
+    position:absolute;
 
-    justify-content:space-between;
+    left:-1px;
+    top:0;
 
-    margin-bottom:13px;
+    width:7px;
+    height:52px;
 
-    color:#a71925;
-
-    font-family:
-        "Arial Narrow",
-        Arial,
-        sans-serif;
-
-    font-size:12px;
-
-    font-weight:900;
-
-    letter-spacing:2.5px;
-
-    text-transform:uppercase;
-}
-
-.cronica-cabecera span:last-child{
-    color:#8d8476;
-
-    font-size:9px;
-
-    letter-spacing:2px;
+    background:#a91d29;
 }
 
 
 /* texto */
 
 .cronica-chenchitazo p{
+    position:relative;
+
     margin:0;
 
-    max-width:900px;
-
-    color:#303238;
+    color:#292c31;
 
     font-family:
         Georgia,
+        "Times New Roman",
         serif;
 
-    font-size:18px;
+    font-size:19px;
 
-    line-height:1.75;
+    line-height:1.8;
 
     text-align:left;
 }
 
 
+/* primera letra grande */
+
+.cronica-chenchitazo p::first-letter{
+    float:left;
+
+    margin:
+        5px 9px 0 0;
+
+    color:#a91d29;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:58px;
+
+    font-weight:900;
+
+    line-height:.72;
+}
+
+
 /*=========================================
-=                MÓVIL                  =
+=                 MÓVIL                 =
 =========================================*/
 
 @media (max-width:600px){
 
     .chenchitazo{
-        margin:18px 16px;
+        margin:20px 16px;
+        border-radius:7px;
     }
+
+
+    /* CABECERA */
 
     .periodico-cabecera{
-        padding:21px 13px 16px;
+        min-height:125px;
 
-        border-bottom-width:6px;
-    }
+        padding:28px 15px 24px;
 
-    .periodico-cabecera::before{
-        left:13px;
-        right:13px;
-        top:10px;
+        border-bottom-width:7px;
     }
 
     .periodico-cabecera::after{
-        left:13px;
-        right:13px;
-        bottom:10px;
+        bottom:-7px;
+        height:7px;
     }
 
-    .masthead-superior{
-        margin-bottom:9px;
-
-        font-size:7px;
-
-        letter-spacing:2px;
-    }
 
     .nombre-periodico{
-        font-size:42px;
+        font-size:44px;
 
         line-height:.84;
 
-        letter-spacing:.3px;
+        letter-spacing:.2px;
     }
 
-    .masthead-inferior{
-        grid-template-columns:1fr auto 1fr;
-
-        margin-top:13px;
-
-        padding-top:8px;
-
-        font-size:7px;
-
-        letter-spacing:1px;
-    }
 
     .periodico-jornada{
-        padding:5px 8px;
+        right:16px;
+        bottom:15px;
 
-        font-size:7px;
-
-        letter-spacing:1.2px;
-
-        box-shadow:2px 2px 0 #000;
-    }
-
-    .noticia-chenchitazo{
-        padding:24px 17px 25px;
-    }
-
-    .noticia-categoria{
-        margin-bottom:13px;
+        padding:6px 9px;
 
         font-size:8px;
 
         letter-spacing:1.5px;
+
+        box-shadow:
+            3px 3px 0 #08090a;
     }
 
-    .noticia-categoria::after{
-        margin-left:9px;
+
+    /* CUERPO */
+
+    .noticia-chenchitazo{
+        padding:32px 17px 28px;
     }
+
+
+    /* TITULAR */
 
     .titular-chenchitazo{
-        font-size:40px;
+        font-size:42px;
 
-        line-height:.9;
+        line-height:.89;
 
         letter-spacing:0;
     }
 
-    .titular-linea{
-        height:4px;
+    .titular-chenchitazo::after{
+        width:82%;
 
-        margin-top:16px;
+        height:6px;
+
+        margin-top:18px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #15171b 0%,
+                #15171b 68%,
+                #c59a3a 68%,
+                #c59a3a 100%
+            );
     }
 
+
+    /* FRASE */
+
     .frase-chenchitazo{
-        margin:18px 0 22px;
+        margin:25px 0 29px;
 
-        padding:13px 12px 13px 34px;
-
-        border-left-width:5px;
+        padding:
+            16px
+            14px
+            16px
+            47px;
 
         font-size:15px;
 
-        line-height:1.4;
+        line-height:1.42;
+
+        box-shadow:
+            6px 6px 0 #c59a3a,
+            0 10px 20px rgba(0,0,0,.15);
     }
 
     .frase-chenchitazo::before{
-        left:8px;
-        top:1px;
+        left:10px;
+        top:4px;
 
-        font-size:43px;
+        font-size:53px;
     }
+
+
+    /* IMAGEN */
 
     .imagen-chenchitazo{
-        height:205px;
+        width:calc(100% - 7px);
 
-        margin-bottom:23px;
+        height:215px;
+
+        margin:
+            0
+            0
+            30px
+            7px;
 
         border-width:6px;
-    }
 
-    .foto-numero{
-        top:10px;
-        left:10px;
-
-        padding:4px 6px;
-
-        font-size:7px;
+        box-shadow:
+            -7px 7px 0 #a91d29,
+            0 14px 25px rgba(0,0,0,.25);
     }
 
     .imagen-chenchitazo::before{
         inset:4px;
     }
 
-    .imagen-chenchitazo figcaption{
-        padding:8px 9px;
 
-        font-size:7px;
-
-        letter-spacing:1.3px;
-    }
+    /* RESUMEN */
 
     .cronica-chenchitazo{
-        padding-top:16px;
+        margin-top:5px;
 
-        border-top-width:4px;
+        padding:
+            22px
+            15px
+            4px;
+
+        border-top-width:6px;
     }
 
-    .cronica-cabecera{
-        margin-bottom:10px;
-
-        font-size:9px;
-
-        letter-spacing:1.8px;
-    }
-
-    .cronica-cabecera span:last-child{
-        font-size:7px;
+    .cronica-chenchitazo::before{
+        width:5px;
+        height:40px;
     }
 
     .cronica-chenchitazo p{
         font-size:15px;
 
-        line-height:1.7;
+        line-height:1.72;
+    }
+
+    .cronica-chenchitazo p::first-letter{
+        margin:
+            4px
+            7px
+            0
+            0;
+
+        font-size:48px;
     }
 
 }
