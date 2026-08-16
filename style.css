@@ -31,155 +31,414 @@ body{
 }
 
 
-/*=========================================
-=              CABECERA PREMIUM           =
-=========================================*/
+/* =========================================================
+   CABECERA · LIGA CHENCHITO
+   COMPOSICIÓN ÚNICA
+   ========================================================= */
 
 .topbar{
     position:relative;
-    z-index:10;
 
     width:100%;
+    height:170px;
+
+    margin:0;
+    padding:0;
+
+    overflow:hidden;
+
+    background:#101216;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.28);
+
+    z-index:100;
+}
+
+
+/* =========================================================
+   PIEZA PRINCIPAL
+   ========================================================= */
+
+.cabecera-nueva{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
 
     background:
         radial-gradient(
-            circle at center,
-            #1a1a1a 0%,
-            #0a0a0a 55%,
-            #050505 100%
+            ellipse at 70% 15%,
+            rgba(174,35,47,.24),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 15% 85%,
+            rgba(196,154,58,.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            120deg,
+            #0b0d10 0%,
+            #15191f 38%,
+            #101318 67%,
+            #1c1717 100%
+        );
+}
+
+
+/* =========================================================
+   TEXTURA / PROFUNDIDAD
+   ========================================================= */
+
+.cabecera-nueva::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        repeating-linear-gradient(
+            115deg,
+            transparent 0,
+            transparent 58px,
+            rgba(255,255,255,.018) 59px,
+            transparent 60px
         );
 
-    border-bottom:1px solid rgba(197,145,55,.35);
+    opacity:.8;
 
-    padding:14px 20px 12px;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.45);
-}
-
-.cabecera{
-    width:100%;
-    max-width:1100px;
-    min-height:105px;
-
-    margin:0 auto;
-
-    display:grid;
-
-    grid-template-columns:
-        120px
-        minmax(260px,1fr)
-        120px;
-
-    align-items:center;
-
-    gap:25px;
+    pointer-events:none;
 }
 
 
-/*========== ESCUDO ==========*/
+/* =========================================================
+   BRILLO
+   ========================================================= */
 
-.escudo{
-    width:82px;
-    height:82px;
+.cabecera-brillo{
+    position:absolute;
 
-    object-fit:contain;
+    width:480px;
+    height:480px;
 
-    justify-self:center;
+    right:-170px;
+    top:-250px;
 
-    filter:
-        drop-shadow(0 4px 8px rgba(0,0,0,.7));
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.075) 0%,
+            rgba(255,255,255,.025) 35%,
+            transparent 68%
+        );
+
+    pointer-events:none;
 }
 
 
-/*========== CENTRO CABECERA ==========*/
+/* =========================================================
+   LÍNEA EDITORIAL
+   ========================================================= */
 
-.titulo{
-    min-width:0;
+.cabecera-linea{
+    position:absolute;
 
-    display:flex;
-    flex-direction:column;
+    left:0;
+    right:0;
 
-    align-items:center;
-    justify-content:center;
-}
+    bottom:0;
 
-.logo-horizontal{
-    width:310px !important;
-    max-width:100% !important;
-    height:auto !important;
-
-    display:block;
-
-    filter:
-        drop-shadow(0 5px 10px rgba(0,0,0,.65));
-}
-
-
-/*========== TEMPORADA ==========*/
-
-.temporada{
-    margin-top:7px;
-
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    min-width:105px;
-
-    padding:4px 16px;
-
-    color:#d6d6d6;
+    height:4px;
 
     background:
         linear-gradient(
-            180deg,
-            rgba(255,255,255,.07),
-            rgba(255,255,255,.02)
+            90deg,
+            #9e202b 0%,
+            #9e202b 38%,
+            #c49a3a 38%,
+            #c49a3a 48%,
+            #9e202b 48%,
+            #9e202b 100%
         );
 
-    border:1px solid rgba(197,145,55,.45);
+    opacity:.95;
+}
 
-    border-radius:20px;
+
+/* =========================================================
+   CONTENIDO CENTRAL
+   ========================================================= */
+
+.cabecera-contenido{
+    position:absolute;
+
+    z-index:5;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width:max-content;
+
+    text-align:center;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   "LIGA"
+   ========================================================= */
+
+.cabecera-marca{
+    margin-bottom:1px;
+
+    color:#c49a3a;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     font-size:11px;
-    font-weight:600;
+
+    font-weight:800;
+
+    letter-spacing:7px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   "CHENCHITO"
+   ========================================================= */
+
+.cabecera-titulo{
+    margin:0;
+
+    color:#f4f0e7;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:54px;
+
+    font-weight:900;
+
+    letter-spacing:-3px;
+
+    line-height:.88;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,.45);
+}
+
+
+/* =========================================================
+   TEMPORADA
+   ========================================================= */
+
+.cabecera-temporada{
+    margin-top:10px;
+
+    color:#aeb4bd;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+}
+
+
+.cabecera-temporada strong{
+    color:#f0ece2;
+
+    font-size:10px;
 
     letter-spacing:2px;
+}
 
-    line-height:1.2;
+
+/* =========================================================
+   FORMAS GEOMÉTRICAS
+   ========================================================= */
+
+.cabecera-forma{
+    position:absolute;
+
+    pointer-events:none;
+
+    opacity:.55;
+}
+
+
+/* círculo */
+
+.forma-1{
+    width:210px;
+    height:210px;
+
+    right:-70px;
+    top:-105px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(196,154,58,.30);
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.08),
-        0 3px 8px rgba(0,0,0,.3);
-}
-
-.temporada strong{
-    color:#f2c45c;
-
-    font-size:13px;
-
-    letter-spacing:1.5px;
-
-    margin-left:6px;
+        0 0 0 20px rgba(196,154,58,.025),
+        0 0 0 42px rgba(196,154,58,.018);
 }
 
 
-/*========== CERDITO ==========*/
+/* diagonal roja */
 
-.cerdito{
-    width:82px;
-    height:82px;
+.forma-2{
+    width:260px;
+    height:55px;
 
-    object-fit:contain;
+    left:-70px;
+    bottom:-4px;
 
-    justify-self:center;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(158,32,43,.42),
+            transparent
+        );
 
-    filter:
-        drop-shadow(0 4px 8px rgba(0,0,0,.7));
+    transform:
+        rotate(-17deg);
 }
 
+
+/* figura geométrica */
+
+.forma-3{
+    width:85px;
+    height:85px;
+
+    left:8%;
+
+    top:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width:600px){
+
+    .topbar{
+        height:128px;
+    }
+
+
+    .cabecera-marca{
+        margin-bottom:2px;
+
+        font-size:8px;
+
+        letter-spacing:5px;
+
+        transform:
+            translateX(3px);
+    }
+
+
+    .cabecera-titulo{
+        font-size:39px;
+
+        letter-spacing:-2px;
+    }
+
+
+    .cabecera-temporada{
+        margin-top:8px;
+
+        font-size:6px;
+
+        letter-spacing:2px;
+    }
+
+
+    .cabecera-temporada strong{
+        font-size:8px;
+
+        letter-spacing:1.5px;
+    }
+
+
+    .cabecera-linea{
+        height:3px;
+    }
+
+
+    .forma-1{
+        width:145px;
+        height:145px;
+
+        right:-65px;
+        top:-75px;
+    }
+
+
+    .forma-2{
+        width:190px;
+        height:42px;
+
+        left:-65px;
+    }
+
+
+    .forma-3{
+        width:55px;
+        height:55px;
+
+        left:5%;
+    }
+
+}
 
 /*=========================================
 =                  BANNER                 =
