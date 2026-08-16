@@ -344,7 +344,6 @@ body{
     position:relative;
 
     min-height:112px;
-
     padding:25px 25px 22px;
 
     display:flex;
@@ -353,61 +352,21 @@ body{
 
     background:
         radial-gradient(
-            circle at 15% 30%,
-            rgba(255,255,255,.035),
+            circle at 85% 20%,
+            rgba(196,154,58,.14),
             transparent 32%
         ),
         linear-gradient(
-            115deg,
-            #101113 0%,
-            #17191c 52%,
-            #111214 100%
+            120deg,
+            #20252b 0%,
+            #15191e 52%,
+            #202020 100%
         );
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(196,154,58,.5);
 
     box-shadow:
-        inset 0 -1px 0 rgba(196,154,58,.45);
-}
-
-
-/* detalle editorial muy suave */
-
-.periodico-cabecera::before{
-    content:"";
-
-    position:absolute;
-
-    left:24px;
-    right:24px;
-    top:17px;
-    bottom:17px;
-
-    border-top:1px solid rgba(255,255,255,.08);
-    border-bottom:1px solid rgba(255,255,255,.045);
-
-    pointer-events:none;
-}
-
-
-/* pequeño punto editorial */
-
-.periodico-cabecera::after{
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    bottom:12px;
-
-    width:34px;
-    height:2px;
-
-    transform:translateX(-50%);
-
-    background:var(--oro);
-
-    opacity:.85;
+        inset 0 -1px 0 rgba(255,255,255,.06);
 }
 
 
@@ -421,26 +380,25 @@ body{
 
     margin:0;
 
-    color:#f4f0e6;
+    color:#f5f2eb;
 
     font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+        "Arial Narrow",
+        "Roboto Condensed",
+        Arial,
+        sans-serif;
 
-    font-size:36px;
-    font-weight:700;
+    font-size:37px;
+    font-weight:900;
 
-    letter-spacing:-1.2px;
-    line-height:1;
+    letter-spacing:-1.8px;
+    line-height:.9;
 
     text-align:center;
-
     text-transform:uppercase;
 
-    /* sombra MUY sutil, no WordArt */
     text-shadow:
-        0 2px 3px rgba(0,0,0,.45);
+        0 2px 3px rgba(0,0,0,.5);
 }
 
 
