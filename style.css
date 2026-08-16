@@ -285,203 +285,220 @@ body{
 
 /* =========================================================
    EL CHENCHITAZO
-   DISEÑO EDITORIAL · REVISTA / PRENSA DEPORTIVA
+   EDICIÓN EDITORIAL · DISEÑO PREMIUM
    ========================================================= */
 
 .chenchitazo{
-    --negro:#111214;
-    --negro-suave:#191b1e;
-    --papel:#eee8da;
-    --papel-2:#e5dece;
-    --tinta:#25262a;
-    --rojo:#9d2029;
-    --oro:#c49a3a;
+    --ink:#17191d;
+    --paper:#eee9de;
+    --paper-light:#f6f2e9;
+    --red:#a51f2b;
+    --red-dark:#781722;
+    --gold:#c39a45;
+    --grey:#77746d;
 
     position:relative;
+
     margin:28px 20px;
+
     overflow:hidden;
 
-    color:var(--tinta);
+    color:var(--ink);
 
     background:
-        radial-gradient(
-            circle at 12% 18%,
-            rgba(70,60,40,.045) 0 1px,
-            transparent 1.5px
-        ),
-        radial-gradient(
-            circle at 78% 72%,
-            rgba(70,60,40,.035) 0 1px,
-            transparent 1.5px
-        ),
         linear-gradient(
-            180deg,
-            #f1ecdf 0%,
-            #ebe4d5 100%
+            135deg,
+            var(--paper-light) 0%,
+            var(--paper) 55%,
+            #e5dfd2 100%
         );
 
-    background-size:
-        17px 17px,
-        23px 23px,
-        100% 100%;
+    border:1px solid rgba(0,0,0,.12);
 
-    border:1px solid rgba(255,255,255,.16);
-    border-radius:8px;
+    border-radius:12px;
 
     box-shadow:
-        0 18px 45px rgba(0,0,0,.32),
-        0 3px 8px rgba(0,0,0,.18);
+        0 22px 45px rgba(0,0,0,.28),
+        0 4px 12px rgba(0,0,0,.12);
 
     isolation:isolate;
 }
 
 
 /* =========================================================
-   CABECERA · EDITORIAL ASIMÉTRICA
+   DETALLES GEOMÉTRICOS DEL PAPEL
+   ========================================================= */
+
+.chenchitazo::before{
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    right:-105px;
+    top:-105px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(165,31,43,.18);
+
+    box-shadow:
+        0 0 0 22px rgba(165,31,43,.025),
+        0 0 0 44px rgba(165,31,43,.02);
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+
+.chenchitazo::after{
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+    height:170px;
+
+    left:-95px;
+    bottom:230px;
+
+    transform:rotate(45deg);
+
+    border:
+        1px solid
+        rgba(195,154,69,.22);
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   CABECERA
    ========================================================= */
 
 .periodico-cabecera{
     position:relative;
 
-    min-height:116px;
+    z-index:2;
 
-    padding:20px 24px 18px;
+    min-height:118px;
+
+    padding:25px 28px 21px;
 
     display:flex;
+
     align-items:center;
-    justify-content:flex-start;
 
-    background:#eee8da;
+    justify-content:center;
 
-    border-bottom:
-        1px solid
-        rgba(23,25,28,.25);
+    background:
+        linear-gradient(
+            125deg,
+            #202329 0%,
+            #111317 52%,
+            #1c1e22 100%
+        );
 
     overflow:hidden;
+
+    border-bottom:
+        4px solid
+        var(--red);
 }
 
 
-/* bloque rojo lateral */
+/* círculo decorativo */
 
 .periodico-cabecera::before{
     content:"";
 
     position:absolute;
 
-    left:0;
-    top:0;
-    bottom:0;
+    width:180px;
+    height:180px;
 
-    width:9px;
+    right:-75px;
+    top:-85px;
 
-    background:#9d2029;
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(195,154,69,.35);
+
+    box-shadow:
+        0 0 0 18px rgba(195,154,69,.035),
+        0 0 0 36px rgba(195,154,69,.025);
+
+    pointer-events:none;
 }
 
 
-/* pequeño detalle superior */
+/* pequeño bloque rojo */
 
 .periodico-cabecera::after{
     content:"";
 
     position:absolute;
 
-    right:23px;
-    top:19px;
+    left:24px;
+    top:22px;
 
-    width:35px;
-    height:35px;
+    width:8px;
+    height:34px;
 
-    border-top:
-        1px solid
-        rgba(157,32,41,.55);
+    background:var(--red);
 
-    border-right:
-        1px solid
-        rgba(157,32,41,.55);
+    transform:skewY(-18deg);
 
-    opacity:.8;
+    box-shadow:
+        12px 0 0 rgba(195,154,69,.65);
+
+    pointer-events:none;
 }
 
 
 /* =========================================================
-   NOMBRE
+   EL CHENCHITAZO
    ========================================================= */
 
 .nombre-periodico{
     position:relative;
 
-    z-index:2;
+    z-index:3;
 
-    margin:0 0 0 12px;
+    margin:0;
 
-    color:#15171a;
-
-    font-family:
-        "Arial Narrow",
-        "Roboto Condensed",
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-
-    font-size:39px;
-
-    font-weight:900;
-
-    letter-spacing:-2.4px;
-
-    line-height:.82;
-
-    text-align:left;
-
-    text-transform:uppercase;
-
-    max-width:75%;
-}
-
-
-/* =========================================================
-   JORNADA
-   ========================================================= */
-
-.periodico-jornada{
-    position:absolute;
-
-    right:22px;
-    bottom:17px;
-
-    z-index:5;
-
-    padding:5px 0;
-
-    background:transparent;
-
-    color:#9d2029;
+    color:#f5f1e8;
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size:9px;
+    font-size:38px;
 
     font-weight:900;
 
-    letter-spacing:1.8px;
+    letter-spacing:-2.3px;
 
-    line-height:1;
+    line-height:.9;
+
+    text-align:center;
 
     text-transform:uppercase;
 
-    transform:none;
-
-    box-shadow:none;
-
-    border-top:
-        2px solid #9d2029;
-
-    border-bottom:
-        1px solid #9d2029;
+    text-shadow:
+        0 3px 8px rgba(0,0,0,.5);
 }
+
 
 /* =========================================================
    JORNADA
@@ -490,34 +507,34 @@ body{
 .periodico-jornada{
     position:absolute;
 
-    right:18px;
-    bottom:12px;
+    right:23px;
+    bottom:15px;
 
     z-index:5;
 
-    padding:5px 10px;
-
-    background:var(--rojo);
+    padding:6px 10px;
 
     color:#fff;
 
+    background:var(--red);
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
     font-size:9px;
-    font-weight:800;
 
-    letter-spacing:1.4px;
+    font-weight:900;
+
+    letter-spacing:1.6px;
+
     line-height:1;
 
-    text-transform:uppercase;
-
-    transform:rotate(-1deg);
+    transform:rotate(-2deg);
 
     box-shadow:
-        2px 2px 0 rgba(0,0,0,.45);
+        3px 3px 0 #08090b;
 }
 
 
@@ -528,14 +545,9 @@ body{
 .noticia-chenchitazo{
     position:relative;
 
-    padding:27px 25px 29px;
+    z-index:2;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.12),
-            transparent 45%
-        );
+    padding:28px 27px 30px;
 }
 
 
@@ -546,48 +558,48 @@ body{
 .titular-chenchitazo{
     position:relative;
 
-    max-width:94%;
+    max-width:92%;
 
     margin:0;
 
-    color:#17181b;
+    color:var(--ink);
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    /*
-       Importante:
-       claramente menor que EL CHENCHITAZO
-    */
-    font-size:29px;
+    font-size:28px;
 
     font-weight:900;
 
-    line-height:1.06;
+    line-height:1.08;
 
-    letter-spacing:-1.05px;
+    letter-spacing:-.9px;
 
     text-transform:uppercase;
 }
 
 
-/* nada de rayita debajo */
+/*
+   Pequeño elemento geométrico.
+   No es una simple raya.
+*/
 
 .titular-chenchitazo::after{
     content:"";
 
     display:block;
 
-    width:52px;
-    height:3px;
+    width:46px;
+    height:7px;
 
     margin-top:14px;
 
-    background:var(--rojo);
+    background:var(--red);
 
-    opacity:.9;
+    transform:
+        skewX(-28deg);
 }
 
 
@@ -598,18 +610,22 @@ body{
 .frase-chenchitazo{
     position:relative;
 
-    margin:19px 0 24px;
+    margin:20px 0 25px;
 
-    padding:13px 17px;
+    padding:13px 18px;
+
+    color:#3d3b38;
 
     background:
         linear-gradient(
             90deg,
-            rgba(196,154,58,.09),
-            rgba(196,154,58,.025)
+            rgba(195,154,69,.12),
+            rgba(195,154,69,.035)
         );
 
-    color:#35343a;
+    border-left:
+        3px solid
+        var(--gold);
 
     font-family:
         Georgia,
@@ -618,26 +634,11 @@ body{
 
     font-size:15px;
 
-    font-weight:600;
     font-style:italic;
 
+    font-weight:600;
+
     line-height:1.45;
-
-    border-left:3px solid var(--rojo);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.4),
-        inset 0 -1px 0 rgba(0,0,0,.06);
-}
-
-
-/*
-   Quitamos por completo las comillas amarillas
-   que daban aspecto artificial.
-*/
-
-.frase-chenchitazo::before{
-    content:none;
 }
 
 
@@ -648,32 +649,24 @@ body{
 .imagen-chenchitazo{
     position:relative;
 
-    width:100%;
+    width:calc(100% + 54px);
 
-    /*
-       La imagen pasa a formar parte de la composición,
-       no de una "caja con marco".
-    */
-    height:250px;
+    height:260px;
 
-    margin:0;
+    margin-left:-27px;
+
+    margin-bottom:28px;
 
     overflow:hidden;
 
     background:#111;
 
-    border-radius:2px;
-
     box-shadow:
-        0 12px 25px rgba(0,0,0,.28);
+        0 14px 28px rgba(0,0,0,.25);
 }
 
 
-/*
-   El borde desaparece.
-   Añadimos una pequeña integración visual
-   mediante luz y sombra.
-*/
+/* recorte diagonal */
 
 .imagen-chenchitazo::before{
     content:"";
@@ -682,23 +675,23 @@ body{
 
     z-index:3;
 
-    inset:0;
+    left:-30px;
+    bottom:-35px;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.02) 45%,
-            rgba(0,0,0,.22) 100%
-        );
+    width:120px;
+    height:80px;
+
+    background:var(--red);
+
+    transform:rotate(-10deg);
+
+    opacity:.92;
 
     pointer-events:none;
 }
 
 
-/*
-   Línea editorial muy fina inferior,
-   integrada en la fotografía.
-*/
+/* detalle dorado */
 
 .imagen-chenchitazo::after{
     content:"";
@@ -707,15 +700,19 @@ body{
 
     z-index:4;
 
-    left:0;
-    right:0;
-    bottom:0;
+    right:18px;
+    bottom:16px;
 
-    height:3px;
+    width:32px;
+    height:32px;
 
-    background:var(--rojo);
+    border:
+        2px solid
+        rgba(255,255,255,.75);
 
-    opacity:.85;
+    transform:rotate(45deg);
+
+    pointer-events:none;
 }
 
 
@@ -728,44 +725,32 @@ body{
     object-fit:cover;
 
     transition:
-        transform .65s cubic-bezier(.2,.7,.2,1),
-        filter .4s ease;
+        transform .6s ease;
 }
 
 
-/* pequeño efecto al pasar por encima */
-
 .chenchitazo:hover
 .imagen-chenchitazo img{
-    transform:scale(1.018);
-
-    filter:
-        contrast(1.02)
-        saturate(1.02);
+    transform:scale(1.025);
 }
 
 
 /* =========================================================
-   TEXTO DE LA CRÓNICA
+   CRÓNICA
    ========================================================= */
 
 .cronica-chenchitazo{
     position:relative;
 
-    margin-top:25px;
-
-    padding:20px 3px 2px;
+    padding:20px 5px 4px;
 
     border-top:
         1px solid
-        rgba(37,38,42,.32);
+        rgba(23,25,29,.35);
 }
 
 
-/*
-   El pequeño detalle rojo sustituye
-   las rayas amarillas/rojas anteriores.
-*/
+/* detalle gráfico */
 
 .cronica-chenchitazo::before{
     content:"";
@@ -773,26 +758,22 @@ body{
     position:absolute;
 
     left:0;
-    top:20px;
+    top:19px;
 
-    width:3px;
-    height:32px;
+    width:28px;
+    height:4px;
 
-    background:var(--rojo);
+    background:var(--red);
 
-    opacity:.9;
+    box-shadow:
+        34px 0 0 var(--gold);
 }
 
 
-/*
-   Nada de "RESUMEN".
-   El texto entra directamente.
-*/
-
 .cronica-chenchitazo p{
-    margin:0;
+    margin:14px 0 0;
 
-    padding-left:15px;
+    padding-left:0;
 
     color:#343238;
 
@@ -804,24 +785,16 @@ body{
     font-size:15px;
 
     line-height:1.72;
-
-    letter-spacing:.05px;
 }
 
 
-/* =========================================================
-   PRIMERA LETRA DEL TEXTO
-   ========================================================= */
-
-/*
-   Hace que el comienzo tenga aspecto editorial
-   sin meter una R gigante artificial.
-*/
+/* primera letra editorial */
 
 .cronica-chenchitazo p::first-letter{
-    color:var(--rojo);
+    color:var(--red);
 
-    font-size:30px;
+    font-size:31px;
+
     font-weight:700;
 
     line-height:.8;
@@ -836,41 +809,42 @@ body{
 
     .chenchitazo{
         margin:20px 16px;
-        border-radius:7px;
+
+        border-radius:9px;
     }
 
 
-    /* -----------------------------------------
-       CABECERA
-       ----------------------------------------- */
-
     .periodico-cabecera{
-        min-height:92px;
+        min-height:94px;
 
-        padding:21px 14px 18px;
+        padding:20px 15px 17px;
+
+        border-bottom-width:3px;
     }
 
 
     .periodico-cabecera::before{
-        left:14px;
-        right:14px;
+        width:135px;
+        height:135px;
 
-        top:13px;
-        bottom:13px;
+        right:-65px;
+        top:-65px;
     }
 
 
     .periodico-cabecera::after{
-        bottom:10px;
+        left:17px;
+        top:18px;
 
-        width:28px;
+        width:6px;
+        height:28px;
     }
 
 
     .nombre-periodico{
-        font-size:30px;
+        font-size:29px;
 
-        letter-spacing:-.8px;
+        letter-spacing:-1.5px;
     }
 
 
@@ -886,50 +860,35 @@ body{
     }
 
 
-    /* -----------------------------------------
-       CUERPO
-       ----------------------------------------- */
-
     .noticia-chenchitazo{
-        padding:21px 16px 23px;
+        padding:22px 17px 24px;
     }
 
-
-    /* -----------------------------------------
-       TITULAR
-       ----------------------------------------- */
 
     .titular-chenchitazo{
         max-width:100%;
 
-        font-size:24px;
+        font-size:23px;
 
         line-height:1.08;
 
-        letter-spacing:-.65px;
+        letter-spacing:-.55px;
     }
 
 
     .titular-chenchitazo::after{
-        width:38px;
-        height:3px;
+        width:35px;
+
+        height:5px;
 
         margin-top:11px;
     }
 
 
-    /* -----------------------------------------
-       FRASE
-       ----------------------------------------- */
-
     .frase-chenchitazo{
-        margin:16px 0 20px;
+        margin:16px 0 21px;
 
-        padding:
-            10px
-            12px
-            10px
-            14px;
+        padding:10px 12px;
 
         font-size:13px;
 
@@ -939,51 +898,53 @@ body{
     }
 
 
-    /* -----------------------------------------
-       IMAGEN
-       ----------------------------------------- */
-
     .imagen-chenchitazo{
-        height:190px;
+        width:calc(100% + 34px);
 
-        margin:0;
+        height:195px;
 
-        border-radius:2px;
+        margin-left:-17px;
 
-        box-shadow:
-            0 9px 19px rgba(0,0,0,.25);
+        margin-bottom:22px;
+    }
+
+
+    .imagen-chenchitazo::before{
+        width:85px;
+        height:55px;
+
+        left:-22px;
+        bottom:-24px;
     }
 
 
     .imagen-chenchitazo::after{
-        height:2px;
+        right:13px;
+        bottom:12px;
+
+        width:24px;
+        height:24px;
     }
 
 
-    /* -----------------------------------------
-       CRÓNICA
-       ----------------------------------------- */
-
     .cronica-chenchitazo{
-        margin-top:21px;
-
-        padding:
-            16px
-            2px
-            1px;
+        padding:17px 2px 2px;
     }
 
 
     .cronica-chenchitazo::before{
         top:16px;
 
-        width:3px;
-        height:27px;
+        width:22px;
+        height:3px;
+
+        box-shadow:
+            27px 0 0 var(--gold);
     }
 
 
     .cronica-chenchitazo p{
-        padding-left:12px;
+        margin-top:12px;
 
         font-size:14px;
 
@@ -992,30 +953,30 @@ body{
 
 
     .cronica-chenchitazo p::first-letter{
-        font-size:26px;
+        font-size:27px;
     }
 
 }
 
 
 /* =========================================================
-   MÓVILES MUY PEQUEÑOS
+   MÓVILES PEQUEÑOS
    ========================================================= */
 
 @media (max-width:380px){
 
     .nombre-periodico{
-        font-size:27px;
-    }
-
-
-    .periodico-cabecera{
-        min-height:87px;
+        font-size:26px;
     }
 
 
     .titular-chenchitazo{
-        font-size:22px;
+        font-size:21px;
+    }
+
+
+    .imagen-chenchitazo{
+        height:180px;
     }
 
 
@@ -1024,16 +985,11 @@ body{
     }
 
 
-    .imagen-chenchitazo{
-        height:175px;
-    }
-
-
     .cronica-chenchitazo p{
         font-size:13.5px;
     }
 
-    }
+}
 /*=========================================
 =             BLOQUES PRINCIPALES         =
 =========================================*/
