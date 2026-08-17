@@ -1554,7 +1554,9 @@ body{
 .barra-scroll-nombre{
     margin-left:auto;
 
-    color:#f4eee2;
+    display:flex;
+    align-items:center;
+    gap:7px;
 
     font-family:
         Impact,
@@ -1565,18 +1567,37 @@ body{
     font-size:20px;
     font-weight:900;
 
-    letter-spacing:-.4px;
+    letter-spacing:-.5px;
     line-height:1;
 
     white-space:nowrap;
     text-transform:uppercase;
+
     text-align:right;
 
     text-shadow:
-        2px 2px 0 rgba(0,0,0,.75),
-        0 0 8px rgba(196,154,58,.18);
+        2px 2px 3px rgba(0,0,0,.75);
+}
 
-    transform:skewX(-6deg);
+
+/* LIGA · DORADO */
+
+.barra-liga{
+    color:#c49a3a;
+
+    text-shadow:
+        1px 2px 3px rgba(0,0,0,.8),
+        0 0 7px rgba(196,154,58,.18);
+}
+
+
+/* CHENCHITO · BLANCO */
+
+.barra-chenchito{
+    color:#f4eee2;
+
+    text-shadow:
+        2px 2px 3px rgba(0,0,0,.8);
 }
 
 
@@ -1600,9 +1621,7 @@ body{
     }
 
     .barra-scroll-nombre{
-        font-size:17px;
-        letter-spacing:-.35px;
-    }
-
+    font-size:17px;
+    gap:5px;
+    letter-spacing:-.4px;
 }
-.    
