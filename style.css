@@ -32,66 +32,127 @@ body{
 
 
 /* =========================================================
-   CABECERA PRINCIPAL · LIGA CHENCHITO
-   PIEZA VISUAL ÚNICA
+   CABECERA PRINCIPAL · PORTADA LIGA CHENCHITO
    ========================================================= */
 
 .cabecera-principal{
     position:relative;
 
     width:100%;
+
     margin:0;
+    padding:8px 10px 12px;
+
+    box-sizing:border-box;
 
     overflow:hidden;
 
-    background:#08090b;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(158,32,43,.18),
+            transparent 55%
+        ),
+        linear-gradient(
+            180deg,
+            #090a0c 0%,
+            #101216 100%
+        );
 
-    line-height:0;
-
-    border:0;
+    border-bottom:
+        1px solid
+        rgba(196,154,58,.28);
 
     box-shadow:
-        0 14px 32px rgba(0,0,0,.38);
+        0 12px 30px rgba(0,0,0,.45);
 
-    z-index:100;
+    z-index:10;
 }
 
 
 /* =========================================================
-   IMAGEN DE CABECERA
+   BRILLO INTEGRADO DETRÁS DE LA PORTADA
+   ========================================================= */
+
+.cabecera-principal::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:-35%;
+
+    width:75%;
+    height:150%;
+
+    transform:translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,.055) 0%,
+            rgba(158,32,43,.035) 35%,
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   IMAGEN DE PORTADA
    ========================================================= */
 
 .cabecera-principal img{
+    position:relative;
+
+    z-index:2;
+
     display:block;
 
     width:100%;
     height:auto;
 
-    margin:0;
-    padding:0;
+    max-width:1536px;
 
-    border:0;
+    margin:0 auto;
+
+    border-radius:14px;
 
     object-fit:cover;
 
-    transform:scale(1.001);
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.48),
+        0 0 0 1px rgba(255,255,255,.08);
 
     transition:
-        transform .6s ease,
-        filter .6s ease;
+        box-shadow .3s ease;
 }
 
 
 /* =========================================================
-   EFECTO MUY SUTIL
+   MARCO INTERIOR MUY SUTIL
    ========================================================= */
 
-.cabecera-principal:hover img{
-    transform:scale(1.012);
+.cabecera-principal::after{
+    content:"";
 
-    filter:
-        brightness(1.035)
-        contrast(1.025);
+    position:absolute;
+
+    z-index:3;
+
+    left:10px;
+    right:10px;
+    top:8px;
+    bottom:12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.045);
+
+    border-radius:14px;
+
+    pointer-events:none;
 }
 
 
@@ -102,27 +163,36 @@ body{
 @media (max-width:600px){
 
     .cabecera-principal{
-        width:100%;
+        padding:
+            6px 6px 9px;
+
+        border-bottom-color:
+            rgba(196,154,58,.22);
 
         box-shadow:
-            0 10px 25px rgba(0,0,0,.35);
+            0 9px 22px rgba(0,0,0,.42);
     }
+
 
     .cabecera-principal img{
-        width:100%;
-        height:auto;
+        border-radius:10px;
 
-        transform:none;
+        box-shadow:
+            0 6px 18px rgba(0,0,0,.5),
+            0 0 0 1px rgba(255,255,255,.07);
     }
 
-    .cabecera-principal:hover img{
-        transform:none;
-        filter:none;
+
+    .cabecera-principal::after{
+        left:6px;
+        right:6px;
+        top:6px;
+        bottom:9px;
+
+        border-radius:10px;
     }
 
 }
-
-    
 /*=========================================
 =                  BANNER                 =
 =========================================*/
