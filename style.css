@@ -1466,3 +1466,162 @@ body{
         font-size:14px;
     }
 }
+
+/* =========================================================
+   BARRA FIJA · LIGA CHENCHITO
+   Aparece al hacer scroll
+   ========================================================= */
+
+.barra-scroll{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:54px;
+
+    z-index:1000;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,11,13,.97),
+            rgba(18,18,20,.95)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(196,154,58,.35);
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    transform:translateY(-100%);
+
+    opacity:0;
+
+    transition:
+        transform .28s ease,
+        opacity .28s ease;
+
+    pointer-events:none;
+}
+
+
+/* Cuando aparece */
+
+.barra-scroll.visible{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+
+/* Contenido */
+
+.barra-scroll-contenido{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    padding:0 18px;
+
+    box-sizing:border-box;
+}
+
+
+/* Cerdito */
+
+.barra-scroll-logo{
+
+    width:34px;
+    height:34px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    filter:
+        drop-shadow(
+            0 2px 4px rgba(0,0,0,.45)
+        );
+}
+
+
+/* Nombre */
+
+.barra-scroll-nombre{
+
+    margin-left:11px;
+
+    color:#f4f0e7;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:18px;
+
+    font-weight:900;
+
+    letter-spacing:-.7px;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.5);
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width:600px){
+
+    .barra-scroll{
+
+        height:52px;
+    }
+
+
+    .barra-scroll-contenido{
+
+        padding:0 15px;
+    }
+
+
+    .barra-scroll-logo{
+
+        width:32px;
+        height:32px;
+    }
+
+
+    .barra-scroll-nombre{
+
+        margin-left:10px;
+
+        font-size:17px;
+
+        letter-spacing:-.6px;
+    }
+
+}
