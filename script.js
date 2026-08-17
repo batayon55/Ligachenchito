@@ -15,3 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/* =========================================================
+   BARRA FIJA AL HACER SCROLL
+   ========================================================= */
+
+const barraScroll = document.getElementById("barraScroll");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 180) {
+
+        barraScroll.classList.add("visible");
+
+    } else {
+
+        barraScroll.classList.remove("visible");
+
+    }
+
+});
