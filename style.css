@@ -1563,21 +1563,20 @@ body{
         sans-serif;
 
     font-size:20px;
-
     font-weight:900;
 
     letter-spacing:-.4px;
-
     line-height:1;
 
     white-space:nowrap;
-
     text-transform:uppercase;
-
     text-align:right;
 
     text-shadow:
-        1px 2px 4px rgba(0,0,0,.55);
+        2px 2px 0 rgba(0,0,0,.75),
+        0 0 8px rgba(196,154,58,.18);
+
+    transform:skewX(-6deg);
 }
 
 
