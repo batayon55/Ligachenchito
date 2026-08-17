@@ -1466,10 +1466,8 @@ body{
         font-size:14px;
     }
 }
-
 /* =========================================================
    BARRA FIJA · LIGA CHENCHITO
-   Aparece al hacer scroll
    ========================================================= */
 
 .barra-scroll{
@@ -1477,30 +1475,23 @@ body{
 
     top:0;
     left:0;
-
     width:100%;
+
     height:54px;
 
     z-index:1000;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(10,11,13,.97),
-            rgba(18,18,20,.95)
-        );
+    background:rgba(10,11,13,.96);
 
-    border-bottom:
-        1px solid
-        rgba(196,154,58,.35);
+    border-bottom:1px solid rgba(196,154,58,.28);
 
     box-shadow:
-        0 5px 18px rgba(0,0,0,.35);
+        0 5px 18px rgba(0,0,0,.32);
 
     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
 
     transform:translateY(-100%);
-
     opacity:0;
 
     transition:
@@ -1511,73 +1502,71 @@ body{
 }
 
 
-/* Cuando aparece */
+/* APARECE AL HACER SCROLL */
 
 .barra-scroll.visible{
-
     transform:translateY(0);
-
     opacity:1;
-
     pointer-events:auto;
 }
 
 
-/* Contenido */
+/* CONTENIDO */
 
 .barra-scroll-contenido{
-
     width:100%;
     height:100%;
 
     display:flex;
-
     align-items:center;
 
-    justify-content:flex-start;
-
-    padding:0 18px;
+    justify-content:space-between;
 
     box-sizing:border-box;
+
+    padding:
+        0
+        18px;
 }
 
 
-/* Cerdito */
+/* CERDITO · IZQUIERDA */
 
 .barra-scroll-logo{
-
     width:34px;
     height:34px;
 
-    object-fit:contain;
-
     flex-shrink:0;
+
+    display:block;
+
+    object-fit:contain;
 
     filter:
         drop-shadow(
-            0 2px 4px rgba(0,0,0,.45)
+            0 2px 4px rgba(0,0,0,.5)
         );
 }
 
 
-/* Nombre */
+/* LIGA CHENCHITO · DERECHA */
 
 .barra-scroll-nombre{
+    margin-left:auto;
 
-    margin-left:11px;
-
-    color:#f4f0e7;
+    color:#f4eee2;
 
     font-family:
-        Arial,
-        Helvetica,
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
         sans-serif;
 
-    font-size:18px;
+    font-size:20px;
 
     font-weight:900;
 
-    letter-spacing:-.7px;
+    letter-spacing:-.4px;
 
     line-height:1;
 
@@ -1585,8 +1574,10 @@ body{
 
     text-transform:uppercase;
 
+    text-align:right;
+
     text-shadow:
-        0 2px 5px rgba(0,0,0,.5);
+        1px 2px 4px rgba(0,0,0,.55);
 }
 
 
@@ -1597,31 +1588,22 @@ body{
 @media (max-width:600px){
 
     .barra-scroll{
-
         height:52px;
     }
 
-
     .barra-scroll-contenido{
-
-        padding:0 15px;
+        padding:0 14px;
     }
-
 
     .barra-scroll-logo{
-
-        width:32px;
-        height:32px;
+        width:31px;
+        height:31px;
     }
 
-
     .barra-scroll-nombre{
-
-        margin-left:10px;
-
         font-size:17px;
-
-        letter-spacing:-.6px;
+        letter-spacing:-.35px;
     }
 
 }
+.    
